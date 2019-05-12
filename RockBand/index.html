@@ -29,7 +29,7 @@
             <audio controls>
                 <source src="audio/newSong.mp3" type="audio/mpeg">
             </audio>
-            <p><input type="button" value="Buy Album"></p>
+            <p><button title="newAlbum" value="Buy Album">Buy Album</button></p>
         </article>
 
         <!--Blog Section -->
@@ -63,20 +63,44 @@
                 </li>
             </ul>
 
-            <p><a href="">View More</a></p>
+            <p><a href="news.html">View More</a></p>
         </section>
 
         <!-- Live Events-->
         <section id="tourDates">
         <h2>Live Events</h2>
-            <h3>Tour Name Tour 2017</h3>
-            <ol>
-               <li><h3>14 Nov City, State Location Venue</h3></li>
-               <li><h3>16 Nov City, State Location Venue</h3></li>
-               <li><h3>3 Dec City, State Location Venue</h3></li>
-               <li><h3>9 Dec City, State Location Venue</h3></li>
-            </ol>
-            <p><a href="">View More</a></p>
+
+            <table>
+                <tr>
+                    <th scope="row">Tour Name<br>Tour 2017</th>
+                    <td>14 Nov</td>
+                    <td colspan="4">City,State Location Venue</td>
+                    <td><a href=""><img src="images/location.png" alt="directions" title="Directions"></a></td>
+                    <td><a href=""><img src="images/ticket.png" alt="ticket site" title="Ticket Site"></a></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>16 Nov</td>
+                    <td colspan="4">City,State Location Venue</td>
+                    <td><a href=""><img src="images/location.png" alt="directions" title="Directions"></a></td>
+                    <td><a href=""><img src="images/ticket.png" alt="ticket site"  title="Ticket Site"></a></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>3 Dec</td>
+                    <td colspan="4">City,State Location Venue</td>
+                    <td><a href=""><img src="images/location.png" alt="directions" title="Directions"></a></td>
+                    <td><a href=""><img src="images/ticket.png" alt="ticket site"  title="Ticket Site"></a></td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>9 Dec</td>
+                    <td colspan="4">City,State Location Venue</td>
+                    <td><a href=""><img src="images/location.png" alt="directions" title="Directions"></a></td>
+                    <td><a href=""><img src="images/ticket.png" alt="ticket site"  title="Ticket Site"></a></td>
+                </tr>
+            </table>
+            <p><a href="tourDates.html">View More</a></p>
         </section>
 
     <section id="about">
@@ -87,8 +111,8 @@
     </section>
 
         <footer>
-            <a href="news.html">Newsletter</a>
-            <a href="contact.html">Contact</a>
+            <p><a href="news.html">Newsletter</a></p>
+            <p><a href="contact.html">Contact</a></p>
         </footer>
 
     </body>
