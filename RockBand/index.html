@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
@@ -22,8 +22,8 @@
             </nav>
         </header>
         <!--Audio Section -->
-        <article>
-            <h3>Latest Single</h3>
+        <article id ="single">
+            <h2>Latest Single</h2>
             <p>Album Title</p>
 
             <audio controls>
@@ -35,33 +35,31 @@
         <!--Blog Section -->
         <section id="blog">
             <h2>Latest Band News</h2>
-            <ul>
-                <li>
+                <article>
                     <a href="">
                     <h3>Featured News title</h3>
                         <p>12.01.2016</p></a>
-                </li>
-                <li>
+                </article>
+                <article>
                     <a href="">
                     <h3>News title</h3>
                         <p>11.13.2017</p></a>
-                </li>
-                <li>
+                </article>
+                <article>
                     <a href="">
                         <h3>News title</h3>
                         <p>1.31.2017</p></a>
-                </li>
-                <li>
+                </article>
+                <article>
                     <a href="">
                         <h3>News title</h3>
                         <p>2.04.2017</p></a>
-                </li>
-                <li>
+                </article>
+                <article>
                     <a href="">
                         <h3>News title</h3>
                         <p>2.20.2017</p></a>
-                </li>
-            </ul>
+                </article>
 
             <p><a href="news.html">View More</a></p>
         </section>
@@ -75,29 +73,25 @@
                     <th scope="row">Tour Name<br>Tour 2017</th>
                     <td>14 Nov</td>
                     <td colspan="4">City,State Location Venue</td>
-                    <td><a href=""><img src="images/location.png" alt="directions" title="Directions"></a></td>
-                    <td><a href=""><img src="images/ticket.png" alt="ticket site" title="Ticket Site"></a></td>
+
                 </tr>
                 <tr>
                     <th scope="row"></th>
                     <td>16 Nov</td>
                     <td colspan="4">City,State Location Venue</td>
-                    <td><a href=""><img src="images/location.png" alt="directions" title="Directions"></a></td>
-                    <td><a href=""><img src="images/ticket.png" alt="ticket site"  title="Ticket Site"></a></td>
+
                 </tr>
                 <tr>
                     <th scope="row"></th>
                     <td>3 Dec</td>
                     <td colspan="4">City,State Location Venue</td>
-                    <td><a href=""><img src="images/location.png" alt="directions" title="Directions"></a></td>
-                    <td><a href=""><img src="images/ticket.png" alt="ticket site"  title="Ticket Site"></a></td>
+
                 </tr>
                 <tr>
                     <th scope="row"></th>
                     <td>9 Dec</td>
                     <td colspan="4">City,State Location Venue</td>
-                    <td><a href=""><img src="images/location.png" alt="directions" title="Directions"></a></td>
-                    <td><a href=""><img src="images/ticket.png" alt="ticket site"  title="Ticket Site"></a></td>
+
                 </tr>
             </table>
             <p><a href="tourDates.html">View More</a></p>
@@ -111,12 +105,14 @@
     </section>
 
         <footer>
-            <p><a href="news.html">Newsletter</a></p>
-            <p><a href="contact.html">Contact</a></p>
-            <p><a href="about.html">About</a></p>
-            <p><a href="tourDates.html">Tour Dates</a></p>
+            <ul>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </footer>
 
+        <!-- Javascript -->
+        <!-- <script src="js/content.js"></script> -->
     </body>
 
 
