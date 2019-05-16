@@ -21,12 +21,11 @@ xhr.onload = function()
             for (var i = 0; i < 5; i++)
             {
                 blogTags+= '<article>';
-                blogTags+= '<a href=>'
+                blogTags+= '<a href=>';
                 blogTags+= '<img src="' + data.news[i].imageURL + '"/>';
                 blogTags+= '<h3>' + data.news[i].title + '</h3>';
-                blogTags+='</a>'
+                blogTags+='</a>';
                 blogTags+='<p>' + data.news[i].postDate+'</p>';
-
                 blogTags+= '</article>';
             }
             blogTags+= '<p><a href="news.html">'+"View More"+'</a></p>';
@@ -71,7 +70,7 @@ xhr.onload = function()
             aboutSection.innerHTML = aboutTags;
         }
 
-        var blogPage = document.querySelector('#blogPage article')
+        var blogPage = document.querySelector('#blogPage article');
         if (blogPage)
         {
             var blogs = "";
