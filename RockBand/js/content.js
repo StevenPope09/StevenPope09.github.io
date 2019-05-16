@@ -47,7 +47,7 @@ xhr.onload = function()
             {
                 eventTags+='<tr>';
                 eventTags+='<td>'+ data.events[i].date+'</td>';
-                eventTags+='<td>'+ data.events[i].city//+" "+ data.events[i].state+" "+ data.events[i].venue+'</td>';
+                eventTags+='<td>'+ data.events[i].city
                 eventTags+='<td>'+ data.events[i].state+'</td>';
                 eventTags+='<td>'+ data.events[i].venue+'</td>';
                 eventTags+='</tr>'
@@ -78,6 +78,7 @@ xhr.onload = function()
         if (blogPage)
         {
             var blogs = "";
+            blogs+='<h2>'+"Blog"+'</h2>';
             for (var i = 0; i <data.news.length ; i++)
             {
                 blogs+='<article>';
@@ -89,6 +90,42 @@ xhr.onload = function()
                 blogs+='</article>';
             }
             blogPage.innerHTML = blogs;
+        }
+
+        var teamPage = document.querySelector('#team');
+        if (teamPage)
+        {
+            var members = "";
+            members+='<h2>'+"Team"+'</h2>';
+            members+='<ul>';
+            for (var i = 0; i < data.members.length; i++)
+            {
+                members+='<li>';
+                members+='<img src="' + data.members[i].imageURL + '"/>';
+                members+='<h3>'+ data.members[i].firstname+" "+ data.members[i].lastname+'</h3>';
+                members+='<p>'+data.members[i].instrument+'</p>';
+                members+='<p><a href="">'+"Read More"+'</a></p>';
+                members+='</li>';
+            }
+            members+='</ul>';
+            teamPage.innerHTML= members;
+        }
+
+        var tourDates = document.querySelector('#tours ul');
+        if (tourDates)
+        {
+            var tours="";
+            tours+='<ul>';
+            for (var i = 0; i <data.events.length; i++)
+            {
+                tours+='<li>';
+                tours+='<h3>'+ "Lorem ipsum 2017"+'</h3>';
+                tours+='<p>'+ data.events[i].date + '</p>';
+                tours+='<p>'+ data.events[i].city + " "+ data.events[i].state+'</p>';
+                tours+='<p>'+ data.events[i].venue+'</p>';
+                tours+='</li>';
+            }
+            tourDates.innerHTML = tours;
         }
 
 };
