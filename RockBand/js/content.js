@@ -33,15 +33,13 @@ xhr.onload = function()
             blogSection.innerHTML = blogTags;
         }
 
-        var liveEvents = document.querySelector('#tourdates');
+        var liveEvents = document.querySelector('#tourdates table');
 
         if (liveEvents)
         {
             var eventTags = "";
-            eventTags += '<h2>' + "Live Events"+ '</h2>';
 
             eventTags+='<h3>'+"Tour Name"+'<br>'+"Tour 2017"+'</h3>';
-            eventTags += '<table>';
 
             for (var i = 0; i < 4; i++)
             {
@@ -52,8 +50,7 @@ xhr.onload = function()
                 eventTags+='<td>'+ data.events[i].venue+'</td>';
                 eventTags+='</tr>'
             }
-            eventTags+= '</table>';
-            eventTags+= '<p><a href="tourdates.html">'+"View More"+'</a></p>';
+
 
             liveEvents.innerHTML = eventTags;
         }
@@ -74,30 +71,29 @@ xhr.onload = function()
             aboutSection.innerHTML = aboutTags;
         }
 
-        var blogPage = document.querySelector('#blogPage')
+        var blogPage = document.querySelector('#blogPage article')
         if (blogPage)
         {
             var blogs = "";
-            blogs+='<h2>'+"Blog"+'</h2>';
+            //blogs+='<h2>'+"Blog"+'</h2>';
             for (var i = 0; i <data.news.length ; i++)
             {
-                blogs+='<article>';
+                //blogs+='<article>';
                 blogs+='<img src="' + data.news[i].imageURL + '"/>';
                 blogs+='<h3>'+ data.news[i].postDate+'</h3>';
                 blogs+='<h4>'+data.news[i].title+'</h4>';
                 blogs+='<p>'+"Posted by Super User"+'</p>';
                 blogs+='<p>'+ data.news[i].text+'</p>';
-                blogs+='</article>';
+                //blogs+='</article>';
             }
             blogPage.innerHTML = blogs;
         }
 
-        var teamPage = document.querySelector('#team');
+        var teamPage = document.querySelector('#team ul');
         if (teamPage)
         {
             var members = "";
-            members+='<h2>'+"Team"+'</h2>';
-            members+='<ul>';
+
             for (var i = 0; i < data.members.length; i++)
             {
                 members+='<li>';
@@ -107,7 +103,6 @@ xhr.onload = function()
                 members+='<p><a href="">'+"Read More"+'</a></p>';
                 members+='</li>';
             }
-            members+='</ul>';
             teamPage.innerHTML= members;
         }
 
@@ -115,11 +110,11 @@ xhr.onload = function()
         if (tourDates)
         {
             var tours="";
-            tours+='<ul>';
+
             for (var i = 0; i <data.events.length; i++)
             {
                 tours+='<li>';
-                tours+='<h3>'+ "Lorem ipsum 2017"+'</h3>';
+                tours+='<h3>'+ "Lorem Ipsum 2017"+'</h3>';
                 tours+='<p>'+ data.events[i].date + '</p>';
                 tours+='<p>'+ data.events[i].city + " "+ data.events[i].state+'</p>';
                 tours+='<p>'+ data.events[i].venue+'</p>';
