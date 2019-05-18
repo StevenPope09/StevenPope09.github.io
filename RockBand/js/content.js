@@ -117,6 +117,8 @@ xhr.onload = function()
                 tours+='<p>'+ data.events[i].date + '</p>';
                 tours+='<p>'+ data.events[i].city + " "+ data.events[i].state+'</p>';
                 tours+='<p>'+ data.events[i].venue+'</p>';
+                tours+='<button><a href="'+data.events[i].locationURL+'">'+"View Directions"+'</a></button>';
+                tours+='<button><a href="'+data.events[i].ticketsURL+'">'+"Buy Tickets"+'</a></button>';
                 tours+='</li>';
             }
             tourDates.innerHTML = tours;
