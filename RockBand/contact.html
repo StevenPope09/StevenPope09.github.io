@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Title</title>
-    </head>
-    <body>
-        <!--lOGO -->
-        <header>
-            <h1 ><a href="index.html"><img src="images/RockBand.png" alt="Rock Band Logo"></a></h1>
-            <!--Navigation-->
-            <nav>
-                <ul>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="tourDates.html">Tour Dates</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="index.html">Home</a></li>
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Band!!</title>
+</head>
 
-                </ul>
-            </nav>
-        </header>
+<body>
+<header>
+
+    <!--lOGO -->
+    <h1><a href="index.html"><img src="images/RockBand.png" alt="Rock Band Logo"></a></h1>
+
+    <!--Navigation-->
+    <nav>
+        <ul>
+            <li><a href="news.html">News</a></li>
+            <li><a href="tourdates.html">Tour Dates</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
     <!--Contacts Page -->
-        <h1>Contact Page</h1>
+        <h2>Contact Page</h2>
         <!-- Map will go here prior to the contact info below -->
         <!-- Map -->
         <a href="https://www.google.com/maps/dir//Seattle,+WA/@47.6052185,-122.3464009,13.16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x5490102c93e83355:0x102565466944d59a!2m2!1d-122.3320708!2d47.6062095?hl=en">
@@ -48,30 +50,34 @@
                 consec tetuer adipiscing. Praesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreiauris. Lorem ipsum dolor sit amet, consec tetuer adipiscing.
             </p>
 
-            <p><em>Send an Email, All fields witn an asterik(*) are required</em></p>
+            <p><em>Send an Email, All fields with an asterisk(*) are required</em></p>
 
             <form action="http://example.com/join.php">
-                <label for="name">Name*</label>
-                <input type="text" name="name" id="name" required="required">
+                <div>
+                    <label for="name">Name*</label>
+                    <input type="text" name="name" id="name" required="required">
+                    <!--look up div tag using forms-->
+                    <label for="email">Email*</label>
+                    <input type="email" name="email" id="email" required="required">
 
-                <label for="email">Email*</label>
-                <input type="email" name="email" id="email" required="required">
+                    <label for="subject">Subject*</label>
+                    <input type="text" name="subject" id="subject" required="required">
+                </div>
+                <div>
 
-                <label for="subject">Subject*</label>
-                <input type="text" name="subject" id="subject">
 
-                <label for="message">Message*</label>
-                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <label for="message">Message*</label>
+                    <textarea name="message" id="message" cols="30" rows="10" required="required"></textarea>
+                    <input type="submit" value="Send Email">
+                </div>
 
-                <input type="submit" value="Send Email">
             </form>
         </section>
-
         <footer>
-            <p><a href="tourDates.html">Tour Dates</a></p>
-            <p><a href="news.html">Newsletter</a></p>
-            <p><a href="about.html">About</a></p>
-
+            <ul>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </footer>
        
     </body>
