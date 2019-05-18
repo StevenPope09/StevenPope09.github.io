@@ -44,9 +44,11 @@ xhr.onload = function()
             {
                 eventTags+='<tr>';
                 eventTags+='<td>'+ data.events[i].date+'</td>';
-                eventTags+='<td>'+ data.events[i].city
+                eventTags+='<td>'+ data.events[i].city+'</td>';
                 eventTags+='<td>'+ data.events[i].state+'</td>';
                 eventTags+='<td>'+ data.events[i].venue+'</td>';
+                eventTags+='<td><a href="'+data.events[i].locationURL+'">'+"Location"+'</a></td>';
+                eventTags+='<td><a href="'+data.events[i].ticketsURL+'">'+"Tickets"+'</a></td>';
                 eventTags+='</tr>'
             }
 
