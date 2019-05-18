@@ -15,7 +15,7 @@
     <session id="1318015660">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.opened" value="2" />
@@ -50,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/content.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2760">
-              <caret line="120" column="104" lean-forward="true" selection-start-line="120" selection-start-column="104" selection-end-line="120" selection-end-column="104" />
+            <state relative-caret-position="667">
+              <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -182,16 +182,15 @@
       <option name="presentableId" value="Default" />
       <updated>1557685322285</updated>
       <workItem from="1557685326216" duration="6146000" />
-      <workItem from="1558147745341" duration="1310000" />
+      <workItem from="1558147745341" duration="1915000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7494000" />
+    <option name="totallyTimeSpent" value="8099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18651211" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -256,8 +255,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/content.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2760">
-          <caret line="120" column="104" lean-forward="true" selection-start-line="120" selection-start-column="104" selection-end-line="120" selection-end-column="104" />
+        <state relative-caret-position="667">
+          <caret line="29" column="13" lean-forward="true" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
