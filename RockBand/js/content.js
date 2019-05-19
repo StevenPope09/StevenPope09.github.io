@@ -79,7 +79,7 @@ xhr.onload = function()
             blogs+='<h2>'+"Blog"+'</h2>';
             for (var i = 0; i <data.news.length ; i++)
             {
-                //blogs+='<article>';
+                blogs+='<article>';
                 blogs+='<img src="' + data.news[i].imageURL + '"/>';
                 blogs+='<h3>'+ data.news[i].postDate+'</h3>';
                 blogs+='<h4>'+data.news[i].title+'</h4>';
