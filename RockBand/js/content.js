@@ -32,8 +32,6 @@ xhr.onload = function()
             blogSection.innerHTML = blogTags;
         }
 
-        var liveEvents = document.querySelector('#tourdates table');
-
         if (liveEvents)
         {
             var eventTags = "";
