@@ -70,20 +70,20 @@ xhr.onload = function()
             aboutSection.innerHTML = aboutTags;
         }
 
-        var blogPage = document.querySelector('#blogPage article');
+        var blogPage = document.querySelector('#blogPage');
         if (blogPage)
         {
             var blogs = "";
-            //blogs+='<h2>'+"Blog"+'</h2>';
+            blogs+='<h2>'+"Blog"+'</h2>';
             for (var i = 0; i <data.news.length ; i++)
             {
-                //blogs+='<article>';
+                blogs+='<article>';
                 blogs+='<img src="' + data.news[i].imageURL + '"/>';
                 blogs+='<h3>'+ data.news[i].postDate+'</h3>';
                 blogs+='<h4>'+data.news[i].title+'</h4>';
                 blogs+='<p>'+"Posted by Super User"+'</p>';
                 blogs+='<p>'+ data.news[i].text+'</p>';
-                //blogs+='</article>';
+                blogs+='</article>';
             }
             blogPage.innerHTML = blogs;
         }
