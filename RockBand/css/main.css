@@ -6,6 +6,36 @@ html {}
 	header{
         background: url("../images/band.jpg");
         color: white;
-        
+        height: 788px;
 
+
+
+    }
+     ul{
+        color: purple;
+
+    }
+    #single{
+        background: black;
+        color: white;
+        max-width: 400px;
+
+
+    }
+    nav, a:link{
+        color: white;
+        text-decoration: none;
+    }
+    nav, a:visited{
+        color:pink;
+    }
+    nav, a:hover{
+        color:purple;
+        text-decoration: underline;
+    }
+    nav, a:active{
+        color: yellow;
+    }
+    footer{
+        background: black;
     }
