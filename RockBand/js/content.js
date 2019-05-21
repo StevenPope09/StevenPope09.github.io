@@ -37,6 +37,7 @@ xhr.onload = function()
         {
             var eventTags = "";
 
+
             for (var i = 0; i < 4; i++)
             {
                 eventTags+='<tr>';
@@ -44,11 +45,10 @@ xhr.onload = function()
                 eventTags+='<td>'+ data.events[i].city+'</td>';
                 eventTags+='<td>'+ data.events[i].state+'</td>';
                 eventTags+='<td>'+ data.events[i].venue+'</td>';
-                eventTags+='<td id="location"><a href="'+data.events[i].locationURL+'">'+"Location"+'</a></td>';
-                eventTags+='<td id="tickets"><a href="'+data.events[i].ticketsURL+'">'+"Tickets"+'</a></td>';
+                eventTags+='<td id="location"><a href="'+data.events[i].locationURL+'"><img src="images/location.png" alt="location"/></a></td>';
+                eventTags+='<td id="tickets"><a href="'+data.events[i].ticketsURL+'"><img src="images/ticket.png" alt="tickets"/></a></td>';
                 eventTags+='</tr>';
             }
-
 
             liveEvents.innerHTML = eventTags;
         }
