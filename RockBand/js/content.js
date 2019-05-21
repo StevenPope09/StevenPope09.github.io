@@ -23,9 +23,11 @@ xhr.onload = function()
                 blogTags+= '<article>';
                 blogTags+= '<a href=>';
                 blogTags+= '<img src="' + data.news[i].imageURL + '"/>';
+                blogTags+='<p>' + data.news[i].postDate+'</p>';
                 blogTags+= '<h3>' + data.news[i].title + '</h3>';
                 blogTags+='</a>';
-                blogTags+='<p>' + data.news[i].postDate+'</p>';
+
+
                 blogTags+= '</article>';
             }
             blogTags+= '<p><a href="news.html"><button>'+"View More"+'</button></a></p>';
