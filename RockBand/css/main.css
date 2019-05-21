@@ -10,7 +10,7 @@ html {
 body{
     font: 1.6rem/1.25 "Program OT",arial,sans-serif;
     color: #888888;
-    background: url("../images/band.jpg")no-repeat;
+    background: url("../images/band.jpg");
 
 }
 /*************** BASE STRUCTURE **************/
@@ -49,7 +49,7 @@ nav a:active{
 
 }
 
- 
+
     /*******************TYPOGRAPHY***********************/
 h2,h3,h4,button{
     text-transform: uppercase;
