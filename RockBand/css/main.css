@@ -1,41 +1,29 @@
 /* Rock Band CSS
 ================================================== 
 ================================================== */
+/** Default **/
 
-html {}
-	header{
-        background: url("../images/band.jpg");
-        color: white;
-        height: 788px;
-
-
-
-    }
-     ul{
-        color: purple;
-
-    }
-    #single{
-        background: black;
-        color: white;
-        max-width: 400px;
-
-
-    }
-    nav, a:link{
-        color: white;
-        text-decoration: none;
-    }
-    nav, a:visited{
-        color:pink;
-    }
-    nav, a:hover{
-        color:purple;
-        text-decoration: underline;
-    }
-    nav, a:active{
-        color: yellow;
-    }
-    footer{
-        background: black;
-    }
+html {
+    font-size: 62.5%;
+}
+body{
+    font: 1.6rem/1.25 "Program OT", Arial, sans-serif;
+    color: #888888;
+    background: #CCCCCC;
+}
+	/* BASE STRUCTURE*/
+header, footer, body > section,footer{
+    border: 5px solid red;
+}
+#map, img{
+   align-content: center;
+}
+h2 {
+    font: 2.5rem/1.25 "Program OT",arial,sans-serif;
+    color: #000;
+    background: aliceblue;
+}
+h2 > strong {
+    font: 3.0rem/1.50 "Program OT", arial, sans-serif;
+    color:red;
+}
