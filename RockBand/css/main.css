@@ -63,6 +63,7 @@ h3{
 header{
     background-image: url("../images/band.jpg");
     height: 788px;
+
 }
 #navigation{
     font: 1.6rem "Program OT";
@@ -72,9 +73,10 @@ header{
     margin-left: 50px;
     margin-top: 20px;
 }
-h1{
+#logo{
     margin-left: 50px;
-    margin-top: 75px;
+    padding-top: 75px;
+
 }
 p{
     font: 1.6rem/1.25 "Program OT", Arial, sans-serif;
