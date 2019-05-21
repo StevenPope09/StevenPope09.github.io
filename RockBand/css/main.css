@@ -6,24 +6,84 @@
 html {
     font-size: 62.5%;
 }
+/*BODY FONT*/
 body{
     font: 1.6rem/1.25 "Program OT", Arial, sans-serif;
     color: #888888;
     background: #CCCCCC;
 }
-	/* BASE STRUCTURE*/
+	/* BASE STRUCTURE
 header, footer, body > section,footer{
     border: 5px solid red;
 }
-#map, img{
-   align-content: center;
-}
+    /*HEADING FONTS*/
 h2 {
-    font: 2.5rem/1.25 "Program OT",arial,sans-serif;
-    color: #000;
-    background: aliceblue;
+    font: 2.0rem/1.25 "Program OT",arial,sans-serif;
+    color: #A5A5A5;
+    text-transform: uppercase;
 }
 h2 > strong {
-    font: 3.0rem/1.50 "Program OT", arial, sans-serif;
-    color:red;
+    font: 5.0rem/1.50 "Program OT", arial, sans-serif;
+    color: #E5E5E5;
+    text-transform: uppercase;
+
+}
+h3{
+    font: 3.5rem "Program OT Book",Arial,sans-serif;
+    color:#E5E5E5;
+    text-transform: uppercase;
+
+}
+#blog, h2{
+    font: 2.0rem/1.25 "Program OT",arial,sans-serif;
+    color: #888888;
+    text-transform: uppercase;
+}
+#blog, h2 > strong{
+    font: 5.0rem/1.50 "Program OT", arial, sans-serif;
+    color: #444444;
+    text-transform: uppercase;
+}
+#single button{
+    background-color: #9B59B6;
+    font: 1.4rem "Program OT",Arial,sans-serif;
+    color: #EEEEEE;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-bottom: 3px #783C90;
+
+}
+#single{
+    background: #000000;
+   width: 350px ;
+    padding: 10px;
+    margin-left: 1000px;
+    margin-top: -110px;
+}
+header{
+    background-image: url("../images/band.jpg");
+    height: 788px;
+}
+#navigation{
+    font: 1.6rem "Program OT";
+    color: #EEEEEE;
+    text-transform: uppercase;
+    border-left: 3px #9B59B6 ;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+h1{
+    margin-left: 50px;
+    margin-top: 75px;
+}
+p{
+    font: 1.6rem/1.25 "Program OT", Arial, sans-serif;
+    color: #888888;
+}
+button{
+    background-color: #9B59B6;
+    font: 1.4rem "Program OT",Arial,sans-serif;
+    color: #EEEEEE;
+    text-transform: uppercase;
+    padding: 10px 20px;
 }
