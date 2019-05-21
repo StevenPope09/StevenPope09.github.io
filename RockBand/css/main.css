@@ -6,28 +6,59 @@
 html {
     font-size: 62.5%;
 }
-/*BODY FONT*/
+/*****************BODY FONT*****************/
 body{
     font: 1.6rem/1.25 "Program OT",arial,sans-serif;
     color: #888888;
     background: #CCCCCC;
 }
-
-	/* BASE STRUCTURE
-header, footer, body > section,footer{
-    border: 5px solid red;
+/*************** BASE STRUCTURE **************/
+	header{
+    background-image: url("../images/band.jpg");
+    height: 788px;
 }
-    /*TYPOGRAPHY*/
+.logo{
+    padding-left: 50px;
+    padding-top: 75px;
+}
+nav{
+    font: 2.0rem "Program OT";
+    font-weight: 900;
+    color: #EEEEEE;
+    text-transform: uppercase;
+    margin-left: 5rem;
+    margin-top: 2rem;
+}
+nav a:link{
+    color: #EEEEEE;
+    opacity: 50%;
+}
+nav a:visited{
+    color: #ffffff;
+
+}
+nav a:hover{
+    opacity: 100%;
+}
+nav a:active{
+    color: #EEEEEE;
+    border-left: 3px #9B59B6 ;
+
+}
+    /*******************TYPOGRAPHY***********************/
+h2,h3,h4,button{
+    text-transform: uppercase;
+}
 h2 {
     font: 2.0rem/1.25 "Program OT",arial,sans-serif;
     color: #A5A5A5;
-    text-transform: uppercase;
+
     font-weight: 900;
 }
 h2 > strong {
     font: 5.0rem/1.50 "Program OT",arial,sans-serif;
     color: #E5E5E5;
-    text-transform: uppercase;
+
     display: block;
     font-weight: 900;
 
@@ -35,30 +66,30 @@ h2 > strong {
 #blog, h2{
     font: 2.0rem/1.25 "Program OT",arial,sans-serif;
     color: #888888;
-    text-transform: uppercase;
+
 }
 #blog, h2 > strong{
     font: 5.0rem/1.50 "Program OT", arial, sans-serif;
     color: #444444;
-    text-transform: uppercase;
+
     display: block;
 }
 h3{
     font: 3.5rem "Program OT Book",Arial,sans-serif;
     color:#E5E5E5;
-    text-transform: uppercase;
+
 
 }
 p{
     font: 1.6rem/1.25 "Program OT", Arial, sans-serif;
     color: #888888;
 }
-/*BUTTONS*/
+/*****************BUTTONS*********************/
 #single button{
     background-color: #9B59B6;
     font: 1.4rem "Program OT",Arial,sans-serif;
     color: #EEEEEE;
-    text-transform: uppercase;
+
     padding: 10px 20px;
     border-bottom: 3px #783C90;
 
@@ -67,59 +98,26 @@ button{
     background-color: #9B59B6;
     font: 1.4rem "Program OT",Arial,sans-serif;
     color: #EEEEEE;
-    text-transform: uppercase;
+
     padding: 10px 20px;
 }
 /*****************************************************************************/
 #single{
     background: #000000;
    width: 35rem ;
-    padding: 10px;
+    padding: 1rem;
     margin-left: 100rem;
     margin-top: -10rem;
 }
-header{
-    background-image: url("../images/band.jpg");
-    height: 788px;
-
-}
 
 
-.logo{
-    padding-left: 50px;
-    padding-top: 75px;
-
-}
-.navigation{
-    font: 1.6rem "Program OT";
-    color: #EEEEEE;
-    text-transform: uppercase;
-    margin-left: 50px;
-    margin-top: 20px;
-}
-.navigation a:link{
-    color: #EEEEEE;
-    opacity: 50%;
-}
-.navigation a:visited{
-    color: #ffffff;
-
-}
-.navigation a:hover{
-    opacity: 100%;
-}
-.navigation a:active{
-    color: #EEEEEE;
-    border-left: 3px #9B59B6 ;
-
-}
 #blog img{
-    width: 350px;
-    height: 350px;
+    max-width: 100%;
+    max-height: 100%;
 
 }
 #blog article{
-    border: 2px solid green;
+   
     width: calc(100%/5);
     float: left;
    
@@ -128,14 +126,17 @@ header{
     text-align: center;
 
 }
+
 #about img{
-    width: 350px;
-    height: 350px;
+    max-width: 100%;
+    max-height: 100%;
+
 }
 footer li{
     display: inline;
     color: #783C90;
 }
 footer{
-    padding-top: 150px;
+    padding-top: 15rem;
 }
+
