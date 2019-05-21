@@ -32,7 +32,7 @@ xhr.onload = function()
             blogSection.innerHTML = blogTags;
         }
 
-        var liveEvents= document.querySelector('#tourdates table')
+        var liveEvents= document.querySelector('#tourdates table');
         if (liveEvents)
         {
             var eventTags = "";
@@ -46,7 +46,7 @@ xhr.onload = function()
                 eventTags+='<td>'+ data.events[i].venue+'</td>';
                 eventTags+='<td id="location"><a href="'+data.events[i].locationURL+'">'+"Location"+'</a></td>';
                 eventTags+='<td id="tickets"><a href="'+data.events[i].ticketsURL+'">'+"Tickets"+'</a></td>';
-                eventTags+='</tr>'
+                eventTags+='</tr>';
             }
 
 
