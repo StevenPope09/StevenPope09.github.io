@@ -89,3 +89,27 @@ button{
     text-transform: uppercase;
     padding: 10px 20px;
 }
+#navigation, a:link{
+    font: 1.6rem "Program OT";
+    color: #EEEEEE;
+    text-transform: uppercase;
+    margin-left: 50px;
+    margin-top: 20px;
+    opacity: 100%;
+}
+#navigation, a:visited{
+    font: 1.6rem "Program OT";
+    color: #EEEEEE;
+    text-transform: uppercase;
+    margin-left: 50px;
+    margin-top: 20px;
+    opacity: 50%;
+}
+#navigation, a:active{
+    font: 1.6rem "Program OT";
+    color: #EEEEEE;
+    text-transform: uppercase;
+    border-left: 3px #9B59B6 ;
+    margin-left: 50px;
+    margin-top: 20px;
+}
