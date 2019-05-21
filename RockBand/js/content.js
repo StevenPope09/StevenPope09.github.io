@@ -37,8 +37,6 @@ xhr.onload = function()
         {
             var eventTags = "";
 
-            eventTags+='<h3>'+"Tour Name"+'<br>'+"Tour 2017"+'</h3>';
-
             for (var i = 0; i < 4; i++)
             {
                 eventTags+='<tr>';
