@@ -28,7 +28,7 @@ xhr.onload = function()
                 blogTags+='<p>' + data.news[i].postDate+'</p>';
                 blogTags+= '</article>';
             }
-            blogTags+= '<p><a href="news.html">'+"View More"+'</a></p>';
+            blogTags+= '<p><a href="news.html"><button>'+"View More"+'</button></a></p>';
             blogSection.innerHTML = blogTags;
         }
 
@@ -65,7 +65,7 @@ xhr.onload = function()
             {
                 aboutTags+= '<img src="' + data.members[i].imageURL + '"/>';
             }
-
+            aboutTags+='<p><a href="about.html"><button>'+"Read More"+'</button></a></p>';
             aboutSection.innerHTML = aboutTags;
         }
 
@@ -98,7 +98,7 @@ xhr.onload = function()
                 members+='<img src="' + data.members[i].imageURL + '"/>';
                 members+='<h3>'+ data.members[i].firstname+" "+ data.members[i].lastname+'</h3>';
                 members+='<p>'+data.members[i].instrument+'</p>';
-                members+='<p><a href="">'+"Read More"+'</a></p>';
+                members+='<p><button><a href=""></button>'+"Read More"+'</a></p>';
                 members+='</li>';
             }
             teamPage.innerHTML= members;
