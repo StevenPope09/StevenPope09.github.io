@@ -17,7 +17,7 @@ xhr.onload = function()
         if (blogSection)
         {
             var blogTags = "";
-            blogTags+= '<h2>'+ "Latest Band News"+'</h2>';
+            blogTags+= '<h2>'+ "Latest"+'<strong> Band News</strong></h2>';
             for (var i = 0; i < 5; i++)
             {
                 blogTags+= '<article>';
@@ -32,6 +32,7 @@ xhr.onload = function()
             blogSection.innerHTML = blogTags;
         }
 
+        var liveEvents= document.querySelector('#tourdates table')
         if (liveEvents)
         {
             var eventTags = "";
@@ -45,8 +46,8 @@ xhr.onload = function()
                 eventTags+='<td>'+ data.events[i].city+'</td>';
                 eventTags+='<td>'+ data.events[i].state+'</td>';
                 eventTags+='<td>'+ data.events[i].venue+'</td>';
-                eventTags+='<td><a href="'+data.events[i].locationURL+'">'+"Location"+'</a></td>';
-                eventTags+='<td><a href="'+data.events[i].ticketsURL+'">'+"Tickets"+'</a></td>';
+                eventTags+='<td id="location"><a href="'+data.events[i].locationURL+'">'+"Location"+'</a></td>';
+                eventTags+='<td id="tickets"><a href="'+data.events[i].ticketsURL+'">'+"Tickets"+'</a></td>';
                 eventTags+='</tr>'
             }
 
@@ -58,7 +59,7 @@ xhr.onload = function()
         if (aboutSection)
         {
             var aboutTags = "";
-            aboutTags+='<h2>'+" About The Band"+'</h2>';
+            aboutTags+='<h2>'+" About"+'<strong> The Band</strong></h2>';
             aboutTags+='<h4>'+ data.about.quote+'</h4>';
             aboutTags+='<p>'+ data.about.copy+'</p>';
 
