@@ -18,7 +18,16 @@ xhr.onload = function()
         {
             var blogTags = "";
             blogTags+= '<h2>'+ "Latest"+'<strong> Band News</strong></h2>';
-            for (var i = 0; i < 5; i++)
+            blogTags+= '<article id="featured">';
+            blogTags+= '<a href=>';
+            blogTags+= '<img src="' + data.news[0].imageURL + '"/>';
+            blogTags+='<p>' + data.news[0].postDate+'</p>';
+            blogTags+= '<h3>' + data.news[0].title + '</h3>';
+            blogTags+='</a>';
+
+
+            blogTags+= '</article>';
+            for (var i = 1; i < 5; i++)
             {
                 blogTags+= '<article>';
                 blogTags+= '<a href=>';
