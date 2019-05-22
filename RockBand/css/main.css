@@ -13,11 +13,13 @@ body{
     background: url("../images/band.jpg");
 
 }
-/*************** BASE STRUCTURE **************/
-	header{
-
-        max-width: 1500px;
+#blog{
+    background: #ffffff;
 }
+#about{
+    background: black;
+}
+/*************** BASE STRUCTURE **************/
 
 .logo{
     padding-left: 50px;
@@ -57,27 +59,22 @@ h2,h3,h4,button{
 h2 {
     font: 2.0rem/1.25 "Program OT",arial,sans-serif;
     color: #A5A5A5;
-
     font-weight: 900;
 }
 strong {
     font: 5.0rem/1.50 "Program OT",arial,sans-serif;
     color: #E5E5E5;
-
     display: block;
     font-weight: 900;
 
 }
-
 #blog, h2{
     font: 2.0rem/1.25 "Program OT",arial,sans-serif;
     color: #888888;
-
 }
 #blog strong{
     font: 5.0rem/1.50 "Program OT", arial, sans-serif;
     color: #444444;
-
     display: block;
 }
 h3{
@@ -94,7 +91,6 @@ p,li{
     background-color: #9B59B6;
     font: 1.4rem "Program OT",Arial,sans-serif;
     color: #EEEEEE;
-
     padding: 10px 20px;
     border-bottom: 3px #783C90;
 
@@ -103,7 +99,6 @@ button{
     background-color: #9B59B6;
     font: 1.4rem "Program OT",Arial,sans-serif;
     color: #EEEEEE;
-
     padding: 10px 20px;
 }
 /*****************************************************************************/
@@ -113,40 +108,36 @@ button{
     padding: 1rem;
     float: right;
 }
-#blog{
-    max-width: 1500px;
-}
-#blog img{
+
+img{
     max-width: 100%;
 }
 #featured {
     max-width: 50%;
-    float: left;
+
+
 
 }
 #blog article{
-
     width: calc(25%);
     padding: 2rem;
-  
-    float: right;
     margin-bottom: 2rem;
-   
+    display:inline-block;
+
 }
 
 #blog p, #blog h3{
     text-align: center;
-
 }
 section{
 padding: 2rem 2rem;
 }
 #about img{
-    width: calc(100%/5);
+    width: calc(25%);
     display: inline-block;
     max-width: 100%;
     max-height: 100%;
-    
+
 
 }
 footer li{
