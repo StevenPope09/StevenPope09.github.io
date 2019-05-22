@@ -24,9 +24,8 @@ xhr.onload = function()
             blogTags+='<p>' + data.news[0].postDate+'</p>';
             blogTags+= '<h3>' + data.news[0].title + '</h3>';
             blogTags+='</a>';
-
-
             blogTags+= '</article>';
+
             for (var i = 1; i < 5; i++)
             {
                 blogTags+= '<article>';
@@ -35,8 +34,6 @@ xhr.onload = function()
                 blogTags+='<p>' + data.news[i].postDate+'</p>';
                 blogTags+= '<h3>' + data.news[i].title + '</h3>';
                 blogTags+='</a>';
-
-
                 blogTags+= '</article>';
             }
             blogTags+= '<p><a href="news.html"><button>'+"View More"+'</button></a></p>';
