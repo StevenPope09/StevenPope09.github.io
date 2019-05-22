@@ -10,19 +10,38 @@ html {
 #homepageBody{
     background: url("../images/band.jpg") repeat;
 }
-body{
-    font: 1.6rem/1.25 "Program OT",arial,sans-serif;
+body {
+    font: 1.6rem/1.25 "Program OT", arial, sans-serif;
     color: #888888;
     background: #000;
-
-    /*************** BASE STRUCTURE **************/
 }
+    /*************** BASE STRUCTURE **************/
+
 header{
     margin-bottom: 13rem;
 }
 #blog{
     padding-top: 2rem;
     background: #ffffff;
+}
+#tourdates{
+    background-color: rgba(0,0,0,.5);
+}
+td{
+    padding: .5rem .5rem;
+    color: #ffffff;
+}
+#tourdates h3{
+    max-width: 300px;
+    background-color: #9B59B6;
+    text-align: center;
+}
+#tourdates em{
+    display: block;
+    font: 1.8rem "Program OT Book",Arial,sans-serif;
+    color:#E5E5E5;
+
+    font-weight: 500;
 }
 #about{
     background: black;
@@ -43,17 +62,14 @@ footer{
 }
 #blogPage article{
     max-width: 1000%;
-
 }
 .heading{
     background: url("../images/band.jpg");
     padding-bottom: 13rem;
 }
-
 #sidebar{
     background: #000;
     max-width: 800px;
-
 }
 #sidebar li{
     list-style: disc;
@@ -67,7 +83,6 @@ footer{
     max-width: 1200px;
     padding-left: 15rem;
 }
-
 #team li{
     padding: 1rem;
     max-width: calc(100%/2);
@@ -78,7 +93,6 @@ footer{
     padding-left: 50px;
     padding-top: 75px;
 }
-
 nav{
     padding-top: 2rem;
 }
@@ -100,9 +114,44 @@ nav a:hover{
 }
 nav a:active{
     color: #EEEEEE;
+}
+img{
+    max-width: 100%;
+}
+#blog{
+    padding-left: 8rem;
+}
+#featured article{
+    max-width: 75%;
+}
+#blog article{
+    width: 25%;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    float: right;
+}
 
-
-
+#blog p, #blog h3{
+    text-align: center;
+}
+section{
+    padding: 2rem 2rem;
+}
+#about img{
+    width: calc(25%);
+    display: inline-block;
+    max-width: 100%;
+    padding: 2rem;
+}
+footer li{
+    display: inline;
+    color: #783C90;
+}
+#single{
+    background: #000000;
+    width: 35rem ;
+    padding: 1rem;
+    float: right;
 }
 
     /*******************TYPOGRAPHY***********************/
@@ -165,7 +214,7 @@ form div{
     font: 1.4rem "Program OT",Arial,sans-serif;
     color: #EEEEEE;
     padding: 10px 20px;
-    border-bottom: 3px #783C90;
+    border-bottom: 3px solid #783C90;
 
 }
 button{
@@ -175,50 +224,9 @@ button{
     padding: 10px 20px;
 }
 /*****************************************************************************/
-#single{
-    background: #000000;
-    width: 35rem ;
-    padding: 1rem;
-    float: right;
-}
-
-img{
-    max-width: 100%;
-}
-#featured article{
-    max-width: 75%;
 
 
 
-}
-#blog article{
-    width: calc(25%);
-    padding: 2rem;
-    margin-bottom: 2rem;
-    display: inline-block;
-
-
-}
-
-#blog p, #blog h3{
-    text-align: center;
-}
-section{
-padding: 2rem 2rem;
-}
-#about img{
-    width: calc(25%);
-    display: inline-block;
-    max-width: 100%;
-    max-height: 100%;
-
-
-}
-footer li{
-
-    display: inline;
-    color: #783C90;
-}
 
 
 
