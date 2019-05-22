@@ -106,7 +106,7 @@ xhr.onload = function()
                 members+='<img src="' + data.members[i].imageURL + '"/>';
                 members+='<h3>'+ data.members[i].firstname+" "+ data.members[i].lastname+'</h3>';
                 members+='<p>'+data.members[i].instrument+'</p>';
-                members+='<p><button><a href=""></button>'+"Read More"+'</a></p>';
+                members+='<p><a href=""><button>'+"Read More"+'</button></a></p>';
                 members+='</li>';
             }
             teamPage.innerHTML= members;
