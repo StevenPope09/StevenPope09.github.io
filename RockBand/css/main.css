@@ -68,7 +68,7 @@ footer{
     padding-bottom: 2rem;
 }
 #blogPage article{
-    max-width: 1000%;
+    max-width: 1000px;
 }
 .heading{
     background: url("../images/band.jpg");
@@ -137,7 +137,9 @@ img{
     margin-bottom: 2rem;
     float: right;
 }
-
+#blog button{
+    display: block;
+}
 #blog p, #blog h3{
     text-align: center;
 }
@@ -223,7 +225,7 @@ p,li{
     padding: 1rem 1rem 2rem 2rem;
     display: inline-block;
     width: calc(100%/3);
-    
+
 }
 #tours button{
     float: left;
