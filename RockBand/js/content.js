@@ -81,14 +81,14 @@ xhr.onload = function()
         if (blogPage)
         {
             var blogs = "";
-            blogs+='<h2>'+"Blog"+'</h2>';
+            blogs+='<h2><strong>Blog</strong></h2>';
             for (var i = 0; i <data.news.length ; i++)
             {
                 blogs+='<article>';
-                blogs+='<img src="' + data.news[i].imageURL + '"/>';
                 blogs+='<h3>'+ data.news[i].postDate+'</h3>';
                 blogs+='<h4>'+data.news[i].title+'</h4>';
                 blogs+='<p>'+"Posted by Super User"+'</p>';
+                blogs+='<img src="' + data.news[i].imageURL + '"/>';
                 blogs+='<p>'+ data.news[i].text+'</p>';
                 blogs+='</article>';
             }
