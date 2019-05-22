@@ -120,12 +120,13 @@ xhr.onload = function()
             for (var i = 0; i <data.events.length; i++)
             {
                 tours+='<li>';
+                tours+='<img src="images/tours.jpg"/>';
                 tours+='<h3>'+ "Lorem Ipsum 2017"+'</h3>';
                 tours+='<p>'+ data.events[i].date + '</p>';
                 tours+='<p>'+ data.events[i].city + " "+ data.events[i].state+'</p>';
                 tours+='<p>'+ data.events[i].venue+'</p>';
-                tours+='<button><a href="'+data.events[i].locationURL+'">'+"View Directions"+'</a></button>';
-                tours+='<button><a href="'+data.events[i].ticketsURL+'">'+"Buy Tickets"+'</a></button>';
+                tours+='<p><a href="'+data.events[i].locationURL+'"><button>'+"View Directions"+'</button></a></p>';
+                tours+='<p><a href="'+data.events[i].ticketsURL+'"><button>'+"Buy Tickets"+'</button></a></p>';
                 tours+='</li>';
             }
             tourDates.innerHTML = tours;
