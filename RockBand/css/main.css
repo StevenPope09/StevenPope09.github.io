@@ -19,6 +19,32 @@ body{
 #about{
     background: black;
 }
+footer{
+    background: white;
+    text-align: center;
+}
+#blogPage{
+    background: black;
+    border-right: 3px white;
+    padding-left: 15rem;
+}
+#blogPage article, #sidebar h2{
+
+    padding-bottom: 2rem;
+}
+#blogPage img{
+    max-width: calc(100%/3);
+}
+#blogPage p {
+    max-width: calc(100%/3);
+}
+#sidebar{
+    background: #000;
+}
+#sidebar li{
+    list-style: disc;
+    padding-bottom: 2rem;
+}
 /*************** BASE STRUCTURE **************/
 
 .logo{
@@ -141,18 +167,13 @@ padding: 2rem 2rem;
 
 }
 footer li{
+
     display: inline;
     color: #783C90;
 }
-footer{
-    padding-top: 15rem;
-}
+
 #tourdates h2{
     text-align: right;
     padding-right: 5rem;
-}
-#tourdates{
-    background-image: url("../images/band.jpg");
-
 }
 
