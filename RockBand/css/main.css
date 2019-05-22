@@ -67,6 +67,13 @@ footer{
 }
 #team{
     background: #000;
+    max-width: 1200px;
+}
+#team li{
+    padding: 1rem;
+    max-width: calc(100%/2);
+    text-align: center;
+    display: inline-block;
 }
 .logo{
     padding-left: 50px;
