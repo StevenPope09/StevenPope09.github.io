@@ -45,9 +45,6 @@ footer{
     max-width: 1000%;
 
 }
-#blogs{
-    background: #000;
-}
 .heading{
     background: url("../images/band.jpg");
     padding-bottom: 13rem;
@@ -68,7 +65,9 @@ footer{
 #team{
     background: #000;
     max-width: 1200px;
+    padding-left: 15rem;
 }
+
 #team li{
     padding: 1rem;
     max-width: calc(100%/2);
