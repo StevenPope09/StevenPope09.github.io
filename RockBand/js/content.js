@@ -65,14 +65,18 @@ xhr.onload = function()
         if (aboutSection)
         {
             var aboutTags = "";
+            aboutTags+='<div id="intro">';
             aboutTags+='<h2>'+" About"+'<strong> The Band</strong></h2>';
             aboutTags+='<h4>'+ data.about.quote+'</h4>';
             aboutTags+='<p>'+ data.about.copy+'</p>';
+            aboutTags+='</div>';
 
+            aboutTags+='<div id="members">';
             for (var i = 0; i <5 ; i++)
             {
                 aboutTags+= '<img src="' + data.members[i].imageURL + '"/>';
             }
+            aboutTags+='</div>';
             aboutTags+='<p><a href="about.html"><button>'+"Read More"+'</button></a></p>';
             aboutSection.innerHTML = aboutTags;
         }
