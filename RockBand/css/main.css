@@ -8,7 +8,9 @@ html {
 }
 /*****************BODY FONT*****************/
 #homepageBody{
-    background: url("../images/band.jpg") repeat;
+
+    background: url("../images/band.jpg") no-repeat fixed;
+    background-size: 100%;
 }
 body {
     font: 1.6rem/1.25 "Program OT Book", arial, sans-serif;
@@ -151,25 +153,23 @@ td{
 #about h2,#about h4, #about p{
     margin-bottom: 5rem;
 }
-#about #intro{
-    max-width: 50%;
-    border: 2px solid green;
-
-}
-#about img{
-    max-width: calc(50%);
-
-}
-#about #members::before{
-content: "";
+section::after{
+    content: "";
     display: block;
     clear: both;
 }
-#about #members{
+#intro{
+    max-width: 50%;
+    float: left;
+    margin-left: 3rem;
+}
+#about img{
+    max-width: calc(50%);
+}
+#members{
     width: 25%;
-    float:right;
+    float:left;
     padding: 2rem;
-    border: 2px solid red;
 
 }
 /****************NEWS PAGE******************************************/
