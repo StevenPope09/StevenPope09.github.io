@@ -22,6 +22,7 @@ header{
 footer{
     background: white;
     text-align: center;
+
 }
 footer li{
     display: inline;
@@ -142,24 +143,33 @@ td{
 
 
 /*****************************ABOUT HOME PAGE**********************/
+
 #about{
     background: black;
 
 }
-#about h4, #about p,#about h2{
-    max-width: 700px;
+#about h2,#about h4, #about p{
     margin-bottom: 5rem;
 }
+#about #intro{
+    max-width: 50%;
+    border: 2px solid green;
+
+}
 #about img{
-    display: block;
-    width: calc(25%);
-    float: left;
+    max-width: calc(50%);
+
+}
+#about #members{
+    width: 25%;
+    float:right;
     padding: 2rem;
-    margin:auto;
+    border: 2px solid red;
+    margin: auto;
 }
 /****************NEWS PAGE******************************************/
 #blogPage{
-    max-width: 1000px;
+    max-width: 50%;
     background: black;
     border-right: 3px solid white;
     padding-left: 5rem;
@@ -173,7 +183,10 @@ td{
 }
 #sidebar{
     background: #000;
-    max-width: 800px;
+    max-width: 45%;
+    float: right;
+    display: block;
+    clear: right;
 }
 #sidebar li{
     list-style: disc;
