@@ -16,17 +16,118 @@ body {
     background: #000;
 }
     /*************** BASE STRUCTURE **************/
-
 header{
     margin-bottom: 13rem;
 }
+footer{
+    background: white;
+    text-align: center;
+}
+footer li{
+    display: inline;
+    color: #783C90;
+}
+.heading{
+    background: url("../images/band.jpg");
+    padding-bottom: 13rem;
+}
+.logo{
+    padding-left: 50px;
+    padding-top: 75px;
+}
+img{
+    max-width: 100%;
+}
+
+/*************NAVIGATION*****************/
+nav{
+    padding-top: 2rem;
+
+}
+nav li{
+    padding: .5rem;
+}
+nav a:link{
+    font: 2.0rem/1 "Program OT",arial,sans-serif;
+    font-weight: 700;
+    color: #EEEEEE;
+    opacity: 0.5;
+    text-transform: uppercase;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+nav a:visited{
+    color: #EEEEEE;
+    opacity: 0.5;
+}
+nav a:hover{
+    color:#EEEEEE;
+    opacity: 1.0;
+}
+#navabout{
+    color: #EEEEEE;
+    opacity: 1.0;
+    border-left: 3px solid #9B59B6 ;
+}
+#navcontact{
+    color: #EEEEEE;
+    opacity: 1.0;
+    border-left: 3px solid #9B59B6 ;
+}
+#navnews{
+    color: #EEEEEE;
+    opacity: 1.0;
+    border-left: 3px solid #9B59B6 ;
+}
+#navtour{
+    color: #EEEEEE;
+    opacity: 1.0;
+    border-left: 3px solid #9B59B6 ;
+}
+/***********************HOME PAGE*******************/
+/**************SINGLE ****************/
+#single{
+    background: #000000;
+    width: 35rem ;
+    padding: 1rem;
+    float: right;
+}
+
+/***********************Blog Section HP************/
 #blog{
     padding-top: 2rem;
+    padding-left: 8rem;
     background: #ffffff;
 }
-#tourdates{
-    background-color: rgba(0,0,0,.5);
+
+#blog #featured {
+    width: 50%;
+    height: 100%;
+    
+
 }
+#blog article{
+    width: calc(25%);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    float: left;
+
+}
+#blog button{
+    display: block;
+}
+#blog p, #blog h3{
+    text-align: center;
+}
+section{
+    padding: 2rem 2rem;
+}
+/***************TOUR DATES HP*********************************/
+#tourdates{
+    background-color: rgba(0,0,0,.7);
+}
+
 table{
     text-align: center;
     padding-left: 20rem;
@@ -38,25 +139,25 @@ td{
     padding: .5rem .5rem;
 
 }
-#tourdates h3{
-    max-width: 300px;
-    background-color: #9B59B6;
-    text-align: center;
-}
-#tourdates em{
-    display: block;
-    font: 1.8rem "Program OT Book",Arial,sans-serif;
-    color:#E5E5E5;
 
-    font-weight: 500;
-}
+
+/*****************************ABOUT HOME PAGE**********************/
 #about{
     background: black;
+
 }
-footer{
-    background: white;
-    text-align: center;
+#about h4, #about p,#about h2{
+    max-width: 700px;
+    margin-bottom: 5rem;
 }
+#about img{
+    display: block;
+    width: calc(25%);
+    float: left;
+    padding: 2rem;
+    margin:auto;
+}
+/****************NEWS PAGE******************************************/
 #blogPage{
     max-width: 1000px;
     background: black;
@@ -70,10 +171,6 @@ footer{
 #blogPage article{
     max-width: 1000px;
 }
-.heading{
-    background: url("../images/band.jpg");
-    padding-bottom: 13rem;
-}
 #sidebar{
     background: #000;
     max-width: 800px;
@@ -82,9 +179,7 @@ footer{
     list-style: disc;
     padding-bottom: 2rem;
 }
-#map,#miscInfo,#contactInfo{
-    background: #000;
-}
+/*********************ABOUT PAGE**************************************/
 #team{
     background: #000;
     max-width: 1200px;
@@ -96,81 +191,54 @@ footer{
     text-align: center;
     display: inline-block;
 }
-.logo{
-    padding-left: 50px;
-    padding-top: 75px;
+/********************************CONTACT PAGE************************/
+#map,#miscInfo,#contactInfo{
+    background: #000;
 }
-nav{
-    padding-top: 2rem;
+form div{
+    display: inline;
 }
-nav a:link{
-    font: 2.0rem/1 "Program OT",arial,sans-serif;
-    font-weight: 900;
-    color: #EEEEEE;
-    text-transform: uppercase;
-    margin-left: 5rem;
-    margin-top: 2rem;
-
-}
-nav a:visited{
-    color: #ffffff;
-    border-left: 3px solid #9B59B6 ;
-}
-nav a:hover{
-    opacity: 100%;
-}
-nav a:active{
-    color: #EEEEEE;
-}
-img{
-    max-width: 100%;
-}
-#blog{
-    padding-left: 8rem;
-}
-#featured article{
-    max-width: 75%;
-}
-#blog article{
-    width: 25%;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    float: right;
-}
-#blog button{
+#textBox{
     display: block;
 }
-#blog p, #blog h3{
-    text-align: center;
-}
-section{
-    padding: 2rem 2rem;
-}
-#about img{
-    width: calc(25%);
-    display: inline-block;
+#map img{
     max-width: 100%;
-    padding: 2rem;
-}
-footer li{
-    display: inline;
-    color: #783C90;
-}
-#single{
-    background: #000000;
-    width: 35rem ;
-    padding: 1rem;
-    float: right;
 }
 
-    /*******************TYPOGRAPHY***********************/
+/*************TOURDATES PAGE****************************************/
+#tours ul{
+    padding-top: 5rem;
+}
+#tours li{
+    padding: 1rem 1rem 2rem 2rem;
+    display: inline-block;
+    width: calc(100%/3);
+}
+#tours button{
+    float: left;
+    margin: .3rem;
+}
+#tours{
+
+    padding-left: 2rem;
+}
+
+
+
+
+/*******************TYPOGRAPHY*****************************************/
 h2,h3,h4,button{
     text-transform: uppercase;
+}
+#blog h2, #about h2{
+    border-left: 1px solid #A5A5A5;
+    margin-left: .1rem;
 }
 h2 {
     font: 2.0rem/1.25 "Program OT",arial,sans-serif;
     color: #A5A5A5;
     font-weight: 900;
+
 }
 strong {
     font: 5.0rem/1 "Program OT",arial,sans-serif;
@@ -200,46 +268,40 @@ h3{
     color:#E5E5E5;
     font-weight: 500;
 }
+h4{
+    font: 1.6rem/1.25 "Program OT", arial, sans-serif;
+    color: #EEEEEE;
+}
 p,li{
     font: 1.6rem/1.25 "Program OT", Arial, sans-serif;
     color: #888888;
 }
 #tourdates h2{
     text-align: right;
-    padding-right: 5rem;
+    margin-right: 5rem;
+    border-right: 1px solid #A5A5A5;
 }
-#tours{
+#tourdates h3{
+    max-width: 300px;
+    background-color: #9B59B6;
+    text-align: center;
+}
+#tourdates em{
+    display: block;
+    font: 1.8rem "Program OT Book",Arial,sans-serif;
+    color:#E5E5E5;
 
-    padding-left: 2rem;
+    font-weight: 500;
 }
+#tourdates h2{
+
+}
+
 #tours h2{
     font: 5.0rem/1 "Program OT",arial,sans-serif;
     color: #E5E5E5;
     display: block;
     font-weight: 900;
-}
-#tours ul{
-    padding-top: 5rem;
-}
-#tours li{
-    padding: 1rem 1rem 2rem 2rem;
-    display: inline-block;
-    width: calc(100%/3);
-
-}
-#tours button{
-    float: left;
-    margin: .3rem;
-
-}
-form div{
-    display: inline;
-}
-#textBox{
-    display: block;
-}
-#map img{
-    max-width: 100%;
 }
 /*****************BUTTONS*********************/
 #single button{
