@@ -18,31 +18,53 @@ body {
     background: #000;
 }
     /*************** BASE STRUCTURE **************/
+.wrapper{
+    max-width: 1500px;
+    margin: 0 auto;
+}
 header{
     margin-bottom: 13rem;
 }
 footer{
     background: white;
     text-align: center;
-
 }
 footer li{
-    display: inline;
+    display: inline-block;
     color: #783C90;
 }
+/*=========================================================SOCIAL MEDIA LINKS*********/
+.social{
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    font-size: 0;
+
+    background: url("../images/social.png");
+    background-size: 20rem 8rem;
+}
+.social:hover{
+    background-position-y: -4rem;
+}
+a[href=facebook] {background-position-x: 0;}
+a[href=twitter] {background-position-x: -4rem;}
+a[href=youtube] {background-position-x: -8rem;}
+a[href=google] {background-position-x: -12rem;}
+a[href=instagram] {background-position-x: -16rem;}
 .heading{
     background: url("../images/band.jpg");
     padding-bottom: 13rem;
 }
+/**===============================================================*/
 .logo{
-    padding-left: 50px;
+
     padding-top: 75px;
 }
 img{
     max-width: 100%;
 }
 
-/*************NAVIGATION*****************/
+/*************NAVIGATION*************==============================****/
 nav{
     padding-top: 2rem;
 
@@ -56,7 +78,7 @@ nav a:link{
     color: #EEEEEE;
     opacity: 0.5;
     text-transform: uppercase;
-    margin-left: 5rem;
+
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
@@ -68,26 +90,12 @@ nav a:hover{
     color:#EEEEEE;
     opacity: 1.0;
 }
-#navabout{
+#navabout,#navcontact,#navnews,#navtour{
     color: #EEEEEE;
     opacity: 1.0;
     border-left: 3px solid #9B59B6 ;
 }
-#navcontact{
-    color: #EEEEEE;
-    opacity: 1.0;
-    border-left: 3px solid #9B59B6 ;
-}
-#navnews{
-    color: #EEEEEE;
-    opacity: 1.0;
-    border-left: 3px solid #9B59B6 ;
-}
-#navtour{
-    color: #EEEEEE;
-    opacity: 1.0;
-    border-left: 3px solid #9B59B6 ;
-}
+
 /***********************HOME PAGE*******************/
 /**************SINGLE ****************/
 #single{
@@ -100,7 +108,7 @@ nav a:hover{
 /***********************Blog Section HP************/
 #blog{
     padding-top: 2rem;
-    padding-left: 8rem;
+
     background: #ffffff;
 }
 
@@ -121,7 +129,7 @@ nav a:hover{
     display: block;
 }
 #blog p, #blog h3{
-    text-align: center;
+
 }
 section{
     padding: 2rem 2rem;
@@ -158,6 +166,12 @@ section::after{
     display: block;
     clear: both;
 }
+footer::after{
+    content: "";
+    display: block;
+    clear: right;
+}
+
 #intro{
     max-width: 50%;
     float: left;
@@ -167,8 +181,8 @@ section::after{
     max-width: calc(50%);
 }
 #members{
-    width: 25%;
-    float:left;
+    width: 40%;
+    float:right;
     padding: 2rem;
 
 }
@@ -178,6 +192,7 @@ section::after{
     background: black;
     border-right: 3px solid white;
     padding-left: 5rem;
+    float:left;
 }
 #blogPage article, #sidebar h2{
 
@@ -188,8 +203,7 @@ section::after{
     background: #000;
     max-width: 45%;
     float: right;
-    display: block;
-    clear: right;
+
 }
 #sidebar li{
     list-style: disc;
@@ -198,8 +212,8 @@ section::after{
 /*********************ABOUT PAGE**************************************/
 #team{
     background: #000;
-    max-width: 1200px;
-    padding-left: 15rem;
+
+
 }
 #team li{
     padding: 1rem;
@@ -211,8 +225,22 @@ section::after{
 #map,#miscInfo,#contactInfo{
     background: #000;
 }
-#map img{
-    max-width: 100%;
+#map{
+    max-width: 1500px;
+}
+#contactInfo{
+    border: 1px solid red;
+    max-width: 20%;
+    float: left;
+}
+#miscInfo{
+    max-width: 80%;
+    border: 1px solid blue;
+    float: left ;
+}
+#miscInfo p{
+    max-width: 800px;
+    margin-bottom: 1rem;
 }
 label{
     display: block;
@@ -247,7 +275,6 @@ input{
     margin: .3rem;
 }
 #tours{
-
     padding-left: 2rem;
 }
 
@@ -276,20 +303,13 @@ strong {
 
 }
 #blog, h2{
-    font: 2.0rem/1.25 "Program OT Bold",arial,sans-serif;
     color: #888888;
-    font-weight: 900;
 }
 #blog strong{
-    font: 5.0rem/1 "Program OT Bold", arial, sans-serif;
     color: #444444;
-    display: block;
-    font-weight: 900;
 }
 #blog h3{
-    font: 3.5rem "Program OT Book",Arial,sans-serif;
     color: #444444;
-    font-weight: 500;
 }
 h3{
     font: 3.5rem "Program OT Book",Arial,sans-serif;
