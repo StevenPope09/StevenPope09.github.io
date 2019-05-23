@@ -17,6 +17,7 @@ xhr.onload = function()
         if (blogSection)
         {
             var blogTags = "";
+            blogTags+='<div class="wrapper">';
             blogTags+= '<h2>'+ "Latest"+'<strong> Band News</strong></h2>';
             blogTags+= '<article id="featured">';
             blogTags+= '<a href=>';
@@ -37,6 +38,7 @@ xhr.onload = function()
                 blogTags+= '</article>';
             }
             blogTags+= '<p><a href="news.html"><button>'+"View More"+'</button></a></p>';
+            blogTags+='</div>';
             blogSection.innerHTML = blogTags;
         }
 
@@ -65,6 +67,7 @@ xhr.onload = function()
         if (aboutSection)
         {
             var aboutTags = "";
+            aboutTags+='<div class="wrapper">';
             aboutTags+='<div id="intro">';
             aboutTags+='<h2>'+" About"+'<strong> The Band</strong></h2>';
             aboutTags+='<h4>'+ data.about.quote+'</h4>';
@@ -78,7 +81,7 @@ xhr.onload = function()
                 aboutTags+= '<img src="' + data.members[i].imageURL + '"/>';
             }
             aboutTags+='</div>';
-
+            aboutTags+='</div>';
             aboutSection.innerHTML = aboutTags;
         }
 
@@ -86,6 +89,7 @@ xhr.onload = function()
         if (blogPage)
         {
             var blogs = "";
+            blogs+='<div class="wrapper">';
             blogs+='<h2><strong>Blog</strong></h2>';
             for (var i = 0; i <data.news.length ; i++)
             {
@@ -97,6 +101,7 @@ xhr.onload = function()
                 blogs+='<p>'+ data.news[i].text+'</p>';
                 blogs+='</article>';
             }
+            blogs+='</div>';
             blogPage.innerHTML = blogs;
         }
 
