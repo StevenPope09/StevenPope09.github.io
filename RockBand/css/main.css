@@ -215,14 +215,15 @@ footer{
 /*********************ABOUT PAGE**************************************/
 #team{
     background: #000;
-
-
 }
 #team li{
-    padding: 1rem;
+    padding: 1.5rem;
     max-width: calc(100%/2);
     text-align: center;
     display: inline-block;
+}
+#team p{
+    padding: 1rem;
 }
 /********************************CONTACT PAGE************************/
 #map,#miscInfo,#contactInfo{
@@ -367,6 +368,10 @@ p,li{
     border-bottom: 3px solid #783C90;
 }
 .links{
+    /*
+    clip-path: polygon(100% 0, 100% 0, 0 50%, 0 100%);
+    */
+    
     background-color: #9B59B6;
     font: 1.4rem "Program OT",Arial,sans-serif;
     color: #EEEEEE;
