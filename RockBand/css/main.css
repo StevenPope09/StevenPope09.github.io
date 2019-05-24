@@ -166,11 +166,7 @@ section::after{
     display: block;
     clear: both;
 }
-footer::after{
-    content: "";
-    display: block;
-    clear: right;
-}
+
 
 #intro{
     max-width: 50%;
@@ -194,7 +190,8 @@ footer::after{
     padding-left: 5rem;
     float:left;
 }
-#blogPage article, #sidebar h2{
+
+#blogPage article, #sidebar h2,#blogPage h2{
 
     padding-bottom: 2rem;
 }
@@ -202,12 +199,18 @@ footer::after{
 #sidebar{
     background: #000;
     max-width: 45%;
-    float: right;
+    float: left;
+    margin-left: 15%;
+
 
 }
 #sidebar li{
     list-style: disc;
     padding-bottom: 2rem;
+    margin-left: 3rem;
+}
+footer{
+    clear: both;
 }
 /*********************ABOUT PAGE**************************************/
 #team{
@@ -229,13 +232,13 @@ footer::after{
     max-width: 1500px;
 }
 #contactInfo{
-    border: 1px solid red;
+
     max-width: 20%;
     float: left;
 }
 #miscInfo{
     max-width: 80%;
-    border: 1px solid blue;
+
     float: left ;
 }
 #miscInfo p{
