@@ -11,7 +11,6 @@ html {
 
     background: url("../images/band.jpg") no-repeat fixed;
     background-size: 100%;
-    
 }
 body {
     font: 1.6rem/1.25 "Program OT Book", arial, sans-serif;
@@ -25,9 +24,7 @@ body {
 }
 header{
     margin-bottom: 13rem;
-
-
-
+    
 }
 footer{
     background: white;
