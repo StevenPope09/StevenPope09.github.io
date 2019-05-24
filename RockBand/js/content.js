@@ -37,7 +37,9 @@ xhr.onload = function()
                 blogTags+='</a>';
                 blogTags+= '</article>';
             }
-            blogTags+= '<p><a href="news.html"><button>'+"View More"+'</button></a></p>';
+
+            blogTags+= '<p><a href="news.html" class="links">'+"View More"+'</a></p>';
+
             blogTags+='</div>';
             blogSection.innerHTML = blogTags;
         }
@@ -72,7 +74,7 @@ xhr.onload = function()
             aboutTags+='<h2>'+" About"+'<strong> The Band</strong></h2>';
             aboutTags+='<h4>'+ data.about.quote+'</h4>';
             aboutTags+='<p>'+ data.about.copy+'</p>';
-            aboutTags+='<p><a href="about.html">'+"Read More"+'</a></p>';
+            aboutTags+='<p><a href="about.html" class="links">'+"Read More"+'</a></p>';
             aboutTags+='</div>';
 
             aboutTags+='<div id="members">';
@@ -116,7 +118,7 @@ xhr.onload = function()
                 members+='<img src="' + data.members[i].imageURL + '"/>';
                 members+='<h3>'+ data.members[i].firstname+" "+ data.members[i].lastname+'</h3>';
                 members+='<p>'+data.members[i].instrument+'</p>';
-                members+='<p><a href=""><button>'+"Read More"+'</button></a></p>';
+                members+='<p><a href="" class="links">'+"Read More"+'</a></p>';
                 members+='</li>';
             }
             teamPage.innerHTML= members;
