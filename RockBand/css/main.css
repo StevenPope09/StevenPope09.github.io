@@ -228,36 +228,39 @@ footer{
 #map,#miscInfo,#contactInfo{
     background: #000;
 }
-#map{
-    max-width: 1500px;
-}
 #contactInfo{
-
-    max-width: 20%;
+    width: 20%;
     float: left;
+    align-items: center;
 }
 #miscInfo{
-    max-width: 80%;
-
-    float: left ;
+    width: 70%;
+    float: right ;
 }
 #miscInfo p{
-    max-width: 800px;
+    width: 800px;
     margin-bottom: 1rem;
 }
-label{
+input{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    width: 300px;
+}
+form div{
     display: block;
-    border: 1px solid white;
+    float: left;
+}
+label {
+    display: block;
     width: 15%;
 }
-input{
-    border: 1px solid blue;
+textarea{
+    width: 920px;
 }
 #map h2,#contactInfo h2, #miscInfo h2{
     font: 5.0rem/1 "Program OT Bold",arial,sans-serif;
     color: #E5E5E5;
     font-weight: 900;
-
 }
 #miscInfo em{
     font: 1.6rem/1.25 "Program OT Book Italic", arial, sans-serif;
@@ -356,7 +359,14 @@ p,li{
 }
 /*****************BUTTONS*********************/
 
-button{
+#single button, form button, #tours button{
+    background-color: #9B59B6;
+    font: 1.4rem "Program OT",Arial,sans-serif;
+    color: #EEEEEE;
+    padding: 10px 20px;
+    border-bottom: 3px solid #783C90;
+}
+.links{
     background-color: #9B59B6;
     font: 1.4rem "Program OT",Arial,sans-serif;
     color: #EEEEEE;
