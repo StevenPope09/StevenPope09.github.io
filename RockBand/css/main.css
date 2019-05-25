@@ -286,7 +286,7 @@ footer{
     background: #000;
 }
 #team li{
-    padding: 1.5rem;
+    padding: 1rem;
     max-width: calc(100%/2);
     text-align: center;
     display: inline-block;
@@ -439,8 +439,9 @@ p,li{
     background-color: #9B59B6;
     font: 1.4rem "Program OT",Arial,sans-serif;
     color: #EEEEEE;
-    padding: 10px 20px;
+    padding: 10px 40px;
     border-bottom: 3px solid #783C90;
+    clip-path: polygon(1% 0, 100% 0, 69% 100%, 0% 100%);
 }
 .links{
     /*
@@ -448,10 +449,25 @@ p,li{
     */
 
     background-color: #9B59B6;
+    position: relative;
     font: 1.4rem "Program OT",Arial,sans-serif;
     color: #EEEEEE;
-    padding: 10px 20px;
+    padding: 10px 40px;
     border-bottom: 3px solid #783C90;
+}
+.links::after{
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 40px 40px 0 0;
+    border-color: #007bff transparent transparent transparent;
+
+    position: absolute;
+    right: 0;
+    z-index: 4;
+
 }
 /*****************************************************************************/
 
