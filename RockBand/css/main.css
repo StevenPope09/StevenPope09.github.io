@@ -11,6 +11,7 @@ html {
 
     background: url("../images/band.jpg") no-repeat fixed;
     background-size: 100%;
+    position: relative;
 }
 body {
     font: 1.6rem/1.25 "Program OT Book", arial, sans-serif;
@@ -24,7 +25,7 @@ body {
 }
 header{
     margin-bottom: 13rem;
-    
+
 }
 footer{
     background: white;
@@ -110,9 +111,11 @@ nav a:hover{
 /**************SINGLE ****************/
 #single{
     background: #000000;
-    width: 35rem ;
+    width: 45rem ;
+
     padding: 1rem;
     float: right;
+
 
    
 }
@@ -120,13 +123,14 @@ nav a:hover{
 /***********************Blog Section HP************/
 #blog{
     padding-top: 2rem;
-    position: relative;
+
     background: #ffffff;
 }
 
 #blog #featured {
     width: 50%;
 }
+
 #blog #featured h3,#blog #featured p{
     /*
     background: #9B59B6;*/
