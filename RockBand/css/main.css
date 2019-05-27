@@ -6,9 +6,8 @@
 html {
     font-size: 62.5%;
 }
-/*****************BODY FONT*****************/
+/***************=========================** BODY FONT ===========================*****************/
 #homepageBody{
-
     background: url("../images/band.jpg") no-repeat fixed;
     background-size: 100%;
     position: relative;
@@ -18,14 +17,13 @@ body {
     color: #888888;
     background: #000;
 }
-    /*************** BASE STRUCTURE **************/
+    /***************========================================= BASE STRUCTURE *========*************/
 .wrapper{
     max-width: 1500px;
     margin: 0 auto;
 }
 header{
     margin-bottom: 13rem;
-
 }
 footer{
     background: white;
@@ -38,7 +36,7 @@ footer li{
     position: relative;
     bottom: -1rem;
 }
-/*=========================================================SOCIAL MEDIA LINKS*********/
+/*=========================================================SOCIAL MEDIA LINKS*******=============**/
 .social{
     display: inline-block;
     width: 4rem;
@@ -61,7 +59,8 @@ a[href=instagram] {background-position-x: -16rem;}
     background: url("../images/band.jpg");
     padding-bottom: 13rem;
 }
-/**===============================================================*/
+/**========================================================================================*/
+
 .logo{
 
     padding-top: 75px;
@@ -70,10 +69,9 @@ img{
     max-width: 100%;
 }
 
-/*************NAVIGATION*************==============================****/
+/*************  NAVIGATION   *************==================================================****/
 nav{
     padding-top: 2rem;
-
 }
 nav li{
     padding: .5rem;
@@ -92,7 +90,6 @@ nav a{
 nav a:visited{
     color: #EEEEEE;
     opacity: 0.5;
-
 }
 nav a:hover{
     color:#EEEEEE;
@@ -107,8 +104,8 @@ nav a:hover{
     padding-left: .5rem;
 }
 
-/***********************HOME PAGE*******************/
-/**************SINGLE ****************/
+/***********************HOME PAGE*************=============================================******/
+/**************================= SINGLE ********========================================********/
 #single{
     background: #000000;
     width: 45rem ;
@@ -117,40 +114,30 @@ nav a:hover{
     padding-top: 2rem;
     padding-bottom: 2rem;
     float: right;
-
-
-   
 }
 
-/***********************Blog Section HP************/
+/***********************Blog Section HP***********===========================================*/
 #blog{
     padding-top: 2rem;
     background: #ffffff;
 }
-
 #blog #featured {
     width: 50%;
 }
-
 #blog #featured h3,#blog #featured p{
-    /*
-    background: #9B59B6;*/
     width: 75%;
     position: relative;
     bottom: 12rem;
     padding-left: 2rem;
-    
 }
 #blog h3, #blog article p{
     color: rgba(255,255,255,1);
 }
-
 #blog article{
     width: calc(25%);
     padding-right: 2rem;
 
     float: left;
-
 }
 #blog #featured img{
     height: 565px;
@@ -164,7 +151,6 @@ nav a:hover{
     padding-left: 2rem;
 
 }
-
 #blog h3::after{
     content: '';
     display: block;
@@ -176,7 +162,6 @@ nav a:hover{
     left: 1rem;
     z-index: 1;
 }
-
 #blog img{
     display: block;
     filter: grayscale(100%);
@@ -207,7 +192,7 @@ nav a:hover{
 section{
     padding: 2rem 2rem;
 }
-/***************TOUR DATES HP*********************************/
+/***************TOUR DATES HP**************************======================================*******/
 #tourdates{
     background-color: rgba(0,0,0,.7);
 }
@@ -222,10 +207,9 @@ td{
     color:#E5E5E5;
     font-weight: 500;
     padding: .5rem .5rem;
-
 }
 
-/*****************************ABOUT HOME PAGE**********************/
+/*****************************ABOUT HOME PAGE***************===============================*******/
 
 #about{
     background: black;
@@ -250,9 +234,8 @@ section::after{
     width: 40%;
     float:right;
     padding: 2rem;
-
 }
-/****************NEWS PAGE******************************************/
+/****************NEWS PAGE*************************************===========================*****/
 #blogPage{
     max-width: 50%;
     background: black;
@@ -261,19 +244,14 @@ section::after{
     padding-right: 5rem;
     float:left;
 }
-
 #blogPage article, #sidebar h2,#blogPage h2{
-
     padding-bottom: 2rem;
 }
-
 #sidebar{
     background: #000;
     max-width: 45%;
     float: left;
     margin-left: 15%;
-
-
 }
 #sidebar li{
     list-style: disc;
@@ -283,7 +261,7 @@ section::after{
 footer{
     clear: both;
 }
-/*********************ABOUT PAGE**************************************/
+/*********************ABOUT PAGE**********************************-======================***/
 #team{
     background: #000;
 }
@@ -297,7 +275,7 @@ footer{
 #team p{
     padding: 1rem;
 }
-/********************************CONTACT PAGE************************/
+/********************************CONTACT PAGE*******************=======================*****/
 #map,#miscInfo,#contactInfo{
     background: #000;
 }
@@ -314,7 +292,6 @@ footer{
 #miscInfo{
     width: 70%;
     float: right ;
-
 }
 #miscInfo p{
     width: 800px;
@@ -348,7 +325,7 @@ textarea{
 }
 
 
-/*************TOURDATES PAGE****************************************/
+/*************TOURDATES PAGE************************************===================****/
 #tours ul{
     padding-top: 5rem;
 }
@@ -362,11 +339,7 @@ textarea{
     margin-right: 4rem;
 }
 
-
-
-
-
-/*******************TYPOGRAPHY*****************************************/
+/*******************TYPOGRAPHY************************************=================*****/
 h2,h3,h4,button{
     text-transform: uppercase;
 }
@@ -437,7 +410,7 @@ p,li{
     display: block;
     font-weight: 900;
 }
-/*****************BUTTONS*********************/
+/*****************BUTTONS**************============================*******/
 
 #single button, form button, #tours button{
     background-color: #9B59B6;
@@ -457,7 +430,6 @@ p,li{
     border-bottom: 3px solid #783C90;
 
 }
-
 
 /*****************************************************************************/
 

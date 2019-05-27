@@ -8,7 +8,6 @@ var xhr = new XMLHttpRequest();
 
 xhr.onload = function()
 {
-
     //save json data
         var data = JSON.parse(xhr.responseText);
 
@@ -49,7 +48,6 @@ xhr.onload = function()
         {
             var eventTags = "";
 
-
             for (var i = 0; i < 4; i++)
             {
                 eventTags+='<tr>';
@@ -61,7 +59,6 @@ xhr.onload = function()
                 eventTags+='<td id="tickets"><a href="'+data.events[i].ticketsURL+'"><img src="images/ticket.png" alt="tickets" title="Tickets for Event"/></a></td>';
                 eventTags+='</tr>';
             }
-
             liveEvents.innerHTML = eventTags;
         }
 
