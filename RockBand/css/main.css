@@ -112,8 +112,10 @@ nav a:hover{
 #single{
     background: #000000;
     width: 45rem ;
-
-    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 16% 100%);
+    padding-left: 10rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     float: right;
 
 
@@ -123,7 +125,6 @@ nav a:hover{
 /***********************Blog Section HP************/
 #blog{
     padding-top: 2rem;
-
     background: #ffffff;
 }
 
@@ -147,6 +148,7 @@ nav a:hover{
 #blog article{
     width: calc(25%);
     padding-right: 2rem;
+
     float: left;
 
 }
@@ -159,7 +161,7 @@ nav a:hover{
     width: 75%;
     position: relative;
     bottom: 10rem;
-
+    padding-left: 2rem;
 
 }
 
@@ -213,6 +215,7 @@ section{
 table{
     text-align: center;
     padding-left: 20rem;
+    margin-bottom: 3rem;
 }
 td{
     font: 3.5rem "Program OT Book",Arial,sans-serif;
@@ -221,7 +224,6 @@ td{
     padding: .5rem .5rem;
 
 }
-
 
 /*****************************ABOUT HOME PAGE**********************/
 
@@ -354,11 +356,9 @@ textarea{
 }
 #tours button{
     float: left;
-    margin: .3rem;
+    margin-right: 4rem;
 }
-#tours{
-    padding-left: 2rem;
-}
+
 
 
 
@@ -370,6 +370,7 @@ h2,h3,h4,button{
 #blog h2, #about h2{
     border-left: 1px solid #A5A5A5;
     margin-left: .1rem;
+    padding-left: 1rem;
 }
 h2 {
     font: 2.0rem/1.25 "Program OT Bold",arial,sans-serif;
@@ -410,11 +411,14 @@ p,li{
     text-align: right;
     margin-right: 5rem;
     border-right: 1px solid #A5A5A5;
+    padding-right: 1rem;
 }
 #tourdates h3{
     max-width: 300px;
     background-color: #9B59B6;
     text-align: center;
+    padding: 30px 30px 60px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 16% 100%);
 }
 #tourdates em{
     display: block;
@@ -422,9 +426,6 @@ p,li{
     color:#E5E5E5;
 
     font-weight: 500;
-}
-#tourdates h2{
-
 }
 
 #tours h2{
@@ -441,34 +442,20 @@ p,li{
     color: #EEEEEE;
     padding: 10px 40px;
     border-bottom: 3px solid #783C90;
-    clip-path: polygon(1% 0, 100% 0, 69% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 84% 100%, 0 100%);
+
 }
 .links{
-    /*
-    clip-path: polygon(100% 0, 100% 0, 0 50%, 0 100%);
-    */
-
+    clip-path: polygon(0 0, 100% 0, 84% 100%, 0 100%);
     background-color: #9B59B6;
-    position: relative;
     font: 1.4rem "Program OT",Arial,sans-serif;
     color: #EEEEEE;
-    padding: 10px 40px;
+    padding: 10px 20px;
     border-bottom: 3px solid #783C90;
-}
-.links::after{
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 40px 40px 0 0;
-    border-color: #007bff transparent transparent transparent;
-
-    position: absolute;
-    right: 0;
-    z-index: 4;
 
 }
+
+
 /*****************************************************************************/
 
 
