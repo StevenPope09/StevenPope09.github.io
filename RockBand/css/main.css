@@ -307,7 +307,9 @@ footer{
 #contactInfo{
     width: 20%;
     float: left;
-
+}
+#contactInfo a{
+    color: rgba(255,255,255, .7);
 }
 #miscInfo{
     width: 70%;
@@ -333,6 +335,7 @@ label {
 }
 textarea{
     width: 920px;
+    margin-bottom: 2rem;
 }
 #map h2,#contactInfo h2, #miscInfo h2{
     font: 5.0rem/1 "Program OT Bold",arial,sans-serif;
