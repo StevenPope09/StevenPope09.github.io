@@ -5,6 +5,7 @@
 
 html {
     font-size: 62.5%;
+
 }
 /***************=========================** BODY FONT ===========================*****************/
 #homepageBody{
@@ -322,6 +323,7 @@ textarea{
 }
 #miscInfo em{
     font: 1.6rem/1.25 "Program OT Book Italic", arial, sans-serif;
+    font-style: italic;
 }
 
 
