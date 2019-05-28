@@ -140,7 +140,6 @@ xhr.onload = function()
             }
             tourDates.innerHTML = tours;
         }
-
 };
 //call ajax
 xhr.open('GET','https://joshbloom.github.io/dws1/data/rockband.json',true);
