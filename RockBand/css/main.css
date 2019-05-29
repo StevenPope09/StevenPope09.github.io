@@ -34,17 +34,19 @@ footer li{
     display: inline-block;
     padding-right: 1rem;
     color: #783C90;
-    position: relative;
-    bottom: -1rem;
+}
+.heading{
+    background: url("../images/band.jpg");
+    padding-bottom: 13rem;
 }
 /*=========================================================SOCIAL MEDIA LINKS*******=============**/
-.social{
-    display: inline-block;
-    width: 4rem;
+footer a {
+    display: block;
     height: 4rem;
-    font-size: 0;
-    position: relative;
-    bottom: 2rem;
+    width: 4rem;
+}
+.social{
+    text-indent: -9999px;
     background: url("../images/social.png");
     background-size: 20rem 8rem;
 }
@@ -56,10 +58,7 @@ a[href=twitter] {background-position-x: -4rem;}
 a[href=youtube] {background-position-x: -8rem;}
 a[href=google] {background-position-x: -12rem;}
 a[href=instagram] {background-position-x: -16rem;}
-.heading{
-    background: url("../images/band.jpg");
-    padding-bottom: 13rem;
-}
+
 /**========================================================================================*/
 
 .logo{
@@ -122,13 +121,16 @@ nav a:hover{
     padding-top: 2rem;
     background: #ffffff;
 }
+#blog h2{
+    margin-bottom: 4rem;
+}
 #blog #featured {
     width: 50%;
 }
 #blog #featured h3,#blog #featured p{
     width: 75%;
     position: relative;
-    bottom: 12rem;
+
     padding-left: 2rem;
 }
 #blog h3, #blog article p{
@@ -137,7 +139,6 @@ nav a:hover{
 #blog article{
     width: calc(25%);
     padding-right: 2rem;
-
     float: left;
 }
 #blog #featured img{
@@ -148,7 +149,7 @@ nav a:hover{
     color: rgba(255,255,255,.7);
     width: 75%;
     position: relative;
-    bottom: 10rem;
+    bottom: 13rem;
     padding-left: 2rem;
 
 }
@@ -167,7 +168,7 @@ nav a:hover{
     display: block;
     filter: grayscale(100%);
     position: relative;
-    top: 4rem;
+
 }
 #blog article:hover img{
     filter: grayscale(0%);
@@ -286,9 +287,15 @@ footer{
 #contactInfo{
     width: 20%;
     float: left;
+
 }
+#contactInfo h2{
+    margin-bottom: 5rem;
+}
+
 #contactInfo a{
     color: rgba(255,255,255, .7);
+
 }
 #miscInfo{
     width: 70%;
@@ -296,12 +303,15 @@ footer{
 }
 #miscInfo p{
     width: 800px;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 input{
     margin-right: 1rem;
     margin-bottom: 1rem;
+    padding: 1rem;
     width: 300px;
+    height: 2.5rem;
+    border-radius: 1rem;
 }
 form div{
     display: block;
@@ -314,6 +324,7 @@ label {
 textarea{
     width: 920px;
     margin-bottom: 2rem;
+    border-radius: 1rem;
 }
 #map h2,#contactInfo h2, #miscInfo h2{
     font: 5.0rem/1 "Program OT Bold",arial,sans-serif;
