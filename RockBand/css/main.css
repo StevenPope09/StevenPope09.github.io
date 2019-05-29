@@ -351,13 +351,13 @@ h2,h3,h4,button{
     padding-left: 1rem;
 }
 h2 {
-    font: 2.0rem/1.25 "Program OT Bold",arial,sans-serif;
+    font: 2.0rem/1.25 "Program OT Bold Book",arial,sans-serif;
     color: #A5A5A5;
     font-weight: 900;
 
 }
 strong {
-    font: 5.0rem/1 "Program OT Bold",arial,sans-serif;
+    font: 5.0rem/1 "Program OT Bold Book",arial,sans-serif;
     color: #E5E5E5;
     display: block;
     font-weight: 900;
@@ -378,7 +378,7 @@ h3{
     font-weight: 500;
 }
 h4{
-    font: 1.6rem/1.25 "Program OT Bold", arial, sans-serif;
+    font: 1.6rem/1.25 "Program OT Bold Book", arial, sans-serif;
     color: #EEEEEE;
 }
 p,li{
@@ -407,7 +407,7 @@ p,li{
 }
 
 #tours h2{
-    font: 5.0rem/1 "Program OT",arial,sans-serif;
+    font: 5.0rem/1 "Program OT Book",arial,sans-serif;
     color: #E5E5E5;
     display: block;
     font-weight: 900;
