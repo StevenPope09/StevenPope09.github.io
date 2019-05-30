@@ -115,12 +115,13 @@ xhr.onload = function()
                 members+='<img src="' + data.members[i].imageURL + '"/>';
                 members+='<h3>'+ data.members[i].firstname+" "+ data.members[i].lastname+'</h3>';
                 members+='<p>'+data.members[i].instrument+'</p>';
-                members+='<p><button class="links">'+"Read More"+'</button></p>';
+                members+='<p><button class="readmore">'+"Read More"+'</button></p>';
                 members+='</li>';
             }
             teamPage.innerHTML= members;
             //look up info to call func from another file
             teamInfo();
+
         }
 
         var tourDates = document.querySelector('#tours ul');
