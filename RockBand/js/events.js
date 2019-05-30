@@ -4,9 +4,10 @@
 */
 function readMore(event){
     var target = event.target;
+    var parent = target.parentElement;
     var test = '';
     test+='<p>'+"this is test text"+ '</p>';
-    test+='<p><button>'+"Read Less"+'</button>';
+    test+='<p><button class="link">'+"Read Less"+'</button>';
 
     target.insertAdjacentHTML('afterend',test);
 
