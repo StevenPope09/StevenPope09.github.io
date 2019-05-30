@@ -428,7 +428,7 @@ p,li{
 }
 /*****************BUTTONS**************============================*******/
 
-#single button, form button, #tours button{
+#single button, form button, #tours button, #team button{
     background-color: #9B59B6;
     font: 1.4rem "Program OT",Arial,sans-serif;
     color: #EEEEEE;
