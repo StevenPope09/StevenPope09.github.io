@@ -6,13 +6,15 @@
         var target = event.target;
         var parent = target.parentElement;
         if (target) {
-            var test = '';
-            test += '<div id="moreInfo">';
-            test += '<p>' + "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
+            var addedInfo = '';
+            addedInfo += '<div id="moreInfo">';
+            addedInfo += '<p>' + "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod " +
                 "tempor incididunt ut labore et dolore magna aliqua. Lorem donec massa sapien faucibus et molestie ac." + '</p>';
-            test += '<p><button class="readless">' + "Read Less" + '</button>';
-            test += '</div>';
-            target.insertAdjacentHTML('afterend', test);
+            addedInfo += '<p><button class="readless">' + "Read Less" + '</button>';
+            addedInfo += '</div>';
+
+            target.insertAdjacentHTML('afterend', addedInfo);
+            
             parent.removeChild(parent.querySelector('#team button'));
 
             var lessInfo = document.querySelectorAll('#team .readless');
@@ -23,14 +25,13 @@
         }
     }
 
-    function readLess(event) {
-        var target = event.target;
-        var parent = target.parentElement;
+    function readLess() {
         var less = document.querySelectorAll('#team #moreInfo');
         for (var i = 0; i < less.length; i++) {
             var test = '';
             test += '<p><button class="link">' + "Read More" + '</button>';
             less[i].innerHTML = test;
+            teamInfo();
         }
     }
 
