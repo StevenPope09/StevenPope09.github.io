@@ -2,7 +2,6 @@
  * events.js
  * 
 */
-while(true) {
     function readMore(event) {
         var target = event.target;
         var parent = target.parentElement;
@@ -21,7 +20,6 @@ while(true) {
             for (var i = 0; i < lessInfo.length; i++) {
                 lessInfo[i].addEventListener('click', readLess)
             }
-
         }
     }
 
@@ -42,7 +40,7 @@ while(true) {
             moreInfo[i].addEventListener('click', readMore);
         }
     }
-}
+
 
 
 
