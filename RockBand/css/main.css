@@ -266,6 +266,9 @@ section::after{
 footer{
     clear: both;
 }
+#blogPage button{
+    float: left;
+}
 /*********************ABOUT PAGE**********************************-======================***/
 #team{
     background: #000;
@@ -275,11 +278,14 @@ footer{
     max-width: calc(100%/2);
     text-align: center;
     display: inline-block;
+    min-height: 100%;
 
 }
 #team p{
-    padding: 1rem;
-}
+      padding: 1rem;
+
+  }
+
 /********************************CONTACT PAGE*******************=======================*****/
 #map,#miscInfo,#contactInfo{
     background: #000;
@@ -326,6 +332,7 @@ label {
 }
 textarea{
     width: 920px;
+    padding: 1rem;
     margin-bottom: 2rem;
     border-radius: 1rem;
 }
@@ -428,7 +435,7 @@ p,li{
 }
 /*****************BUTTONS**************============================*******/
 
-#single button, form button, #tours button, #team button{
+button{
     background-color: #9B59B6;
     font: 1.4rem "Program OT",Arial,sans-serif;
     color: #EEEEEE;
