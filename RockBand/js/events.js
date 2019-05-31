@@ -37,7 +37,7 @@
         if (!parent.querySelector('#moreStories')){
             var blog = "";
             blog+='<div class="wrapper" id="moreStories">';
-            
+
             for (var i = 0; i < 5 ; i++)
             {
                 blog+='<article>';
@@ -45,7 +45,11 @@
                 blog+='<h4>'+"2016/01/01"+'</h4>';
                 blog+='<p>'+"Posted by Super User"+'</p>';
                 blog+='<img src="images/drums.jpg"/>';
-                blog+='<p>'+ "Story goes here"+'</p>';
+                blog+='<p>'+ "Lorem ipsum dolor sit amet, consectetur" +
+                    " adipiscing elit, sed do eiusmod tempor incididunt ut " +
+                    "labore et dolore magna aliqua. Sapien faucibus et molestie ac " +
+                    "feugiat sed lectus vestibulum. Elit ut aliquam purus sit amet luctus " +
+                    "venenatis lectus. Tortor id aliquet lectus proin nibh nisl condimentum id. Nullam vehicula ipsum a arcu."+'</p>';
                 blog+='</article>';
             }
             blog+='</div>';

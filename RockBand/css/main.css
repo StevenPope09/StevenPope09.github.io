@@ -2,10 +2,16 @@
 ================================================== 
 ================================================== */
 /** Default **/
+body::-webkit-scrollbar {
+    width: 1.5rem;
+}
 
+body::-webkit-scrollbar-thumb {
+    background-color: #783C90;
+    outline: 1px solid slategrey;
+}
 html {
     font-size: 62.5%;
-
 }
 /***************=========================** BODY FONT ===========================*****************/
 #homepageBody{
@@ -278,14 +284,11 @@ footer{
     max-width: calc(100%/2);
     text-align: center;
     display: inline-block;
-    min-height: 100%;
-
 }
 #team p{
       padding: 1rem;
 
   }
-
 /********************************CONTACT PAGE*******************=======================*****/
 #map,#miscInfo,#contactInfo{
     background: #000;
