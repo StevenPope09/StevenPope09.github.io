@@ -66,7 +66,6 @@
 
 function moreBlog() {
     var moreBlogs = document.querySelector('#blogPage button');
-    console.log(moreBlogs);
     moreBlogs.addEventListener('click', moreNews);
 }
 
