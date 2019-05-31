@@ -30,10 +30,40 @@
     }
 
 
+    function moreNews(event){
+        var target = event.target;
+        var parent = target.parentElement;
+
+        if (!parent.querySelector('#moreStories')){
+            var blog = "";
+            blog+='<div class="wrapper" id="moreStories">';
+            
+            for (var i = 0; i < 5 ; i++)
+            {
+                blog+='<article>';
+                blog+='<h3>'+"Lorem Ipsum" +'</h3>';
+                blog+='<h4>'+"2016/01/01"+'</h4>';
+                blog+='<p>'+"Posted by Super User"+'</p>';
+                blog+='<img src="images/drums.jpg"/>';
+                blog+='<p>'+ "Story goes here"+'</p>';
+                blog+='</article>';
+            }
+            blog+='</div>';
+
+            target.insertAdjacentHTML('beforebegin', blog);
+            target.innerHTML = "Read Less";
+        }
+        else{
+            parent.removeChild(parent.querySelector('#moreStories'));
+            target.innerHTML="View More";
+        }
+    }
 
 
-
-
-
+function moreBlog() {
+    var moreBlogs = document.querySelector('#blogPage button');
+    console.log(moreBlogs);
+    moreBlogs.addEventListener('click', moreNews);
+}
 
 

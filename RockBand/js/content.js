@@ -99,9 +99,13 @@ xhr.onload = function()
                 blogs+='<img src="' + data.news[i].imageURL + '"/>';
                 blogs+='<p>'+ data.news[i].text+'</p>';
                 blogs+='</article>';
+
             }
+            blogs+='<p><button>'+"View More"+'</button></p>';
             blogs+='</div>';
+
             blogPage.innerHTML = blogs;
+            moreBlog();
         }
 
         var teamPage = document.querySelector('#team ul');
