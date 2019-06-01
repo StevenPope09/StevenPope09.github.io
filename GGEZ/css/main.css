@@ -1,0 +1,74 @@
+html{
+    font-size:62.5%;
+}
+body{
+    font: 2.8rem/1.25 "Superclarendon", arial, sans-serif;
+    background: url("../images/background.jpg") fixed no-repeat;
+    background-position-y: -25rem;
+    background-size: 100%;
+    color: #fff;
+}
+header{
+    background: rgba(0,0,0,.5);
+    padding-bottom: 1rem;
+
+}
+nav li{
+    font-size: 2.8rem;
+    text-align: center;
+    display: inline-block;
+    margin-right: 10rem;
+    margin-left: 8rem;
+    color: #fff;
+    opacity: .7;
+}
+nav a{
+    color: #fff;
+
+}
+#home,#userNav,#oppSearchNav,#breakdownNav,#contactnav{
+    color: #FA9C1D;
+}
+.statBoxes{
+    display: inline-block;
+    width: calc(50%);
+    float: left;
+}
+.wrapper{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+header h1{
+    margin-right: 12rem;
+    margin-left: 5rem;
+    float: left;
+}
+header h2{
+    font-size: 4.7rem;
+    float: left;
+    margin-left: 15rem;
+
+}
+header #user{
+    margin-left: 30rem;
+}
+section{
+    clear: both;
+   
+}
+section h3{
+    font: 2.8rem/1 "Bungee Regular",Arial,sans-serif;
+}
+#findStats p{
+    max-width: 750px;
+    position: relative;
+    margin-left: 25%;
+}
+.statBoxes{
+
+    display: inline-block;
+    max-width: 50%;
+}
+header nav{
+    clear: both;
+}
