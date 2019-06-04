@@ -17,8 +17,8 @@ nav li{
     font-size: 2.8rem;
     text-align: center;
     display: inline-block;
-    margin-right: 10rem;
-    margin-left: 8rem;
+    margin-right: 2rem;
+    margin-left: 5rem;
     color: #fff;
     opacity: .7;
 }
@@ -34,23 +34,26 @@ nav a{
     width: calc(50%);
     float: left;
 }
+#findStats{
+    margin-left: 25%;
+}
 .wrapper{
     max-width: 1500px;
     margin: 0 auto;
 }
 header h1{
     margin-right: 12rem;
-    margin-left: 5rem;
+    margin-left: 2rem;
     float: left;
 }
 header h2{
     font-size: 4.7rem;
     float: left;
-    margin-left: 15rem;
+
 
 }
 header #user{
-    margin-left: 30rem;
+    margin-left: 10rem;
 }
 section{
     clear: both;
@@ -59,15 +62,17 @@ section{
 section h3{
     font: 2.8rem/1 "Bungee Regular",Arial,sans-serif;
 }
-#findStats p{
+#topStats p{
     max-width: 750px;
     position: relative;
     margin-left: 25%;
 }
+
 .statBoxes{
 
     display: inline-block;
     max-width: 50%;
+    background-color: rgba(0,0,0,.5);
 }
 header nav{
     clear: both;
