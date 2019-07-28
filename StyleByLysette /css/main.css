@@ -83,7 +83,7 @@ h2 {
 }
 
 header p{
-    font-size: 12px;
+    font-size: 10px;
 }
 p {
     font-family: mainfont;
@@ -220,6 +220,7 @@ form{
         position: relative;
         top: 25%;
     }
+    
 }
 
 @media(min-width: 700px) {
@@ -230,7 +231,9 @@ form{
     p {
         font-size: 14px;
     }
-
+    header p{
+        font-size: 12px;
+    }
     figcaption {
         font-size: 16px;
     }
@@ -255,7 +258,9 @@ form{
     p {
         font-size: 17px;
     }
-
+    header p{
+        font-size: 14px;
+    }
     figcaption {
         font-size: 19px;
     }
