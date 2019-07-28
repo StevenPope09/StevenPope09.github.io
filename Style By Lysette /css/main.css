@@ -1,0 +1,263 @@
+/* Style view gallery button to center with content*/
+/* Style form elements if Bootstrap CSS doesnt cover enough of it*/
+
+/*----------------------------------- Basic Page Setup Header, Footer, and Logo*/
+body {
+    margin-top: 0px;
+}
+
+header {
+    background: url("../images/guilherme-petri-602659-unsplash.jpg") center;
+    opacity: 0.8;
+    height: 35vh;
+    background-size: cover;
+    margin-bottom: 40px;
+}
+
+header p {
+    color: white;
+    background: black;
+    opacity: .8;
+
+    padding: 10px;
+    float: right;
+}
+
+header img {
+    background: black;
+    opacity: .8;
+    padding: 10px;
+
+}
+
+header a {
+    color: #fff;
+}
+
+header a:hover {
+    color: #EBABCB;
+}
+
+#logo {
+    height: 120px;
+    width: 120px;
+    ;
+}
+
+footer {
+    background: #F0D3F7;
+    clear: both;
+    margin-top: 5rem;
+    padding: 15px;
+
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: .5rem;
+}
+
+footer a {
+    color: #000;
+}
+
+footer a:hover {
+    color: #6E44FF;
+}
+
+
+/*------------------------------------------------------------Fonts*/
+@font-face {
+    font-family: mainfont;
+    src: url(https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap);
+}
+
+html {
+    font-size: 14px;
+}
+
+h2 {
+    font-family: mainfont;
+    text-transform: capitalize;
+}
+
+p {
+    font-family: mainfont;
+    font-size: 14px;
+}
+
+figcaption {
+    font-family: mainfont;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+footer h3 {
+    font-style: mainfont bold;
+    font-size: 18px;
+    
+}
+
+/*--------------------------------------------------------------------Index Page*/
+
+#intro {
+    background: #EBABCB;
+    height: 150%;
+    padding: 25px;
+    margin-bottom: 2rem;
+}
+
+#latestWork img {
+    width: 300px;
+    height: 100%;
+    padding: 5px;
+}
+
+#latestWork h2 {
+    background: #EBABCB;
+
+    height: 150%;
+
+    padding: 25px;
+    margin-bottom: 2rem;
+}
+
+#aboutme h2 {
+    background: #EBABCB;
+
+    height: 150%;
+
+    padding: 25px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+button {
+    border: 1px solid black;
+    background: #B6A6CA;
+    padding: 15px;
+    font-family: mainfont;
+}
+
+button:hover {
+    background: #86BBD8;
+    border: 1px solid #EBABCB;
+}
+
+#submit {
+    border: 1px solid black;
+    background: #B6A6CA;
+    padding: 10px;
+    font-family: mainfont;
+}
+
+#submit:hover {
+    background: #86BBD8;
+    border: 1px solid #EBABCB;
+}
+
+/***********************************************************************************/
+/*------------------------------------------------------------------------------------------Gallery Page----------------------------------*/
+#gallery img {
+    object-fit: fill;
+    margin-bottom: 2rem;
+    transition: .8s;
+
+}
+
+#gallery img:hover {
+    transform: scale(1.1);
+}
+
+#galleryhead {
+    background: #EBABCB;
+
+    height: 150%;
+    padding: 25px;
+    margin-bottom: 2rem;
+    margin-bottom: 6rem;
+}
+
+#request {
+    background: #AED9E0;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    margin-bottom: 5rem;
+}
+
+#requestservice {
+    margin-left: 1rem;
+}
+
+#returnhome {
+
+    margin-bottom: 3rem;
+
+}
+
+/*------------------------------------Request Service Page---------------------------------------------*/
+#requestService h2 {
+    background: #EBABCB;
+    height: 150%;
+    padding: 25px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+form{
+    border: 1.5px solid black;
+    padding: 15px;
+}
+
+/************************---------------------------------------------------Media **------------*/
+@media(min-width: 575px) {
+    #aboutme figcaption {
+        position: relative;
+        top: 25%;
+    }
+}
+
+@media(min-width: 700px) {
+    html {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    figcaption {
+        font-size: 16px;
+    }
+
+    #logo {
+        height: 250px;
+        width: 250px;
+        ;
+    }
+
+    #aboutme figcaption {
+        position: relative;
+        top: 20%;
+    }
+}
+
+@media(min-width: 991px) {
+    html {
+        font-size: 17px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    figcaption {
+        font-size: 19px;
+    }
+
+    #welcome figcaption {
+        position: relative;
+        top: 20%;
+    }
+}
