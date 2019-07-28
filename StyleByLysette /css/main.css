@@ -208,6 +208,7 @@ button:hover {
 form{
     border: 1.5px solid black;
     padding: 15px;
+    margin-bottom: 3rem;
 }
 
 /************************---------------------------------------------------Media **------------*/
