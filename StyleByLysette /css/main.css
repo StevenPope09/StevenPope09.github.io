@@ -82,6 +82,9 @@ h2 {
     text-transform: capitalize;
 }
 
+header p{
+    font-size: 12px;
+}
 p {
     font-family: mainfont;
     font-size: 14px;

@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="path/to/lightbox.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
 
@@ -38,6 +39,7 @@
                 <h2>Welcome to Style by Lysette!</h2>
                 <p><em>Quality hair care and beautiful cuts and color!</em></p>
             </div>
+            
             <figure>
                 <div class="row">
                     <div class="col-sm-12 col-lg-6">
@@ -61,25 +63,30 @@
             </figure>
 
         </section>
-
+        
         <section id="latestWork">
             <h2 class="text-center">Latest Styles</h2>
             <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                    <img src="images/galleryimg15.JPG" alt="" class="img-fluid rounded">
+                    <a href="images/galleryimg15.JPG" data-lighthouse="latest style">
+                        <img src="images/galleryimg15.JPG" alt="" class="img-fluid rounded">
+                    </a>
                 </div>
+                <a href="images/galleryimg8.jpg" data-lighthouse="latest style">
+                    <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+                        <img src="images/galleryimg8.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
 
-                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                    <img src="images/galleryimg8.jpg" alt="" class="img-fluid rounded">
-                </div>
-
-                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+            <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+                <a href="images/galleryimg14.jpeg">
                     <img src="images/galleryimg14.jpeg" alt="" class="img-fluid rounded">
-                </div>
+                </a>
+            </div>
 
-                <div class="col-sm-12 col-md-6 col-lg-3 text-center">
-                    <a href="gallery.html"><button id="viewGallery" class="btn-lg">View Full Gallery</button></a>
-                </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 text-center">
+                <a href="gallery.html"><button id="viewGallery" class="btn-lg">View Full Gallery</button></a>
+            </div>
             </div>
             <!--row-->
         </section>
@@ -140,6 +147,7 @@
     <script src="bootstrap/jquery.slim.min.js"></script>
     <script src="bootstrap/popper.min.js"></script>
     <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="path/to/lightbox.js"></script>
 </body>
 
 </html>
