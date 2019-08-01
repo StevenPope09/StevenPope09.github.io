@@ -10,7 +10,7 @@ header {
     opacity: 0.8;
     height: 35vh;
     background-size: cover;
-    margin-bottom: 40px;
+    
 }
 
 header p {
@@ -42,16 +42,7 @@ header a:hover {
     width: 120px;
     ;
 }
-nav a{
-    color: #000;
-    border: 1px solid #000000;
-    margin: 2px;
-    
-}
-nav a:hover{
-    background-color: #EBABCB;
-    color: black;
-}
+
 
 footer {
     background: #F0D3F7;
@@ -186,10 +177,10 @@ section{
 #requestbtn{
     border: 1px solid black;
     background: #B6A6CA;
-    padding: 15px;
+    padding: 7px;
     font-family: mainfont;
     color: #000000;
-    margin-left: 1rem;
+    
 }
 #requestbtn:hover{
     background: #86BBD8;
@@ -232,6 +223,7 @@ section{
     left: 25%;
     margin-bottom: 5rem;
     margin-top: 2rem;
+    padding: 3px;
 }
 
 
@@ -251,12 +243,19 @@ form{
 
 
 /************************---------------------------------------------------Media **------------*/
+@media(max-width: 574px){
+    nav a{
+        margin-bottom: 2rem;
+    }
+}
 @media(min-width: 575px) {
     #aboutme p {
         position: relative;
         top: 25%;
     }
-    
+    nav a{
+        margin-right: 3rem;
+    }
 }
 
 @media(min-width: 700px) {
@@ -282,6 +281,7 @@ form{
         top: 20%;
         font-size: 16px;
     }
+    
 }
 @media(min-width: 768px){
     #gallerybtn{
