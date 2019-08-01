@@ -1,7 +1,6 @@
-/* Style view gallery button to center with content*/
-/* Style form elements if Bootstrap CSS doesnt cover enough of it*/
 
-/*----------------------------------- Basic Page Setup Header, Footer, and Logo*/
+
+/*----------------------------------- Basic Page Setup Header, Footer, Logo, and Nav*/
 body {
     margin-top: 0px;
 }
@@ -42,6 +41,16 @@ header a:hover {
     height: 120px;
     width: 120px;
     ;
+}
+nav a{
+    color: #000;
+    border: 1px solid #000000;
+    margin: 2px;
+    
+}
+nav a:hover{
+    background-color: #EBABCB;
+    color: black;
 }
 
 footer {
@@ -90,16 +99,9 @@ p {
     font-size: 14px;
 }
 
-figcaption {
-    font-family: mainfont;
-    font-size: 14px;
-    line-height: 1.75;
-}
-
 footer h3 {
-    font-style: mainfont bold;
-    font-size: 18px;
     
+    font-size: 18px;   
 }
 
 /*--------------------------------------------------------------------Index Page*/
@@ -108,44 +110,58 @@ footer h3 {
     background: #EBABCB;
     height: 150%;
     padding: 25px;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
 }
 
 #latestWork img {
     width: 300px;
     height: 100%;
-    padding: 5px;
+    padding: 10px;
+    
 }
-
+#latestWork div{
+    margin-bottom: 2rem;
+}
 #latestWork h2 {
     background: #EBABCB;
-
     height: 150%;
-
     padding: 25px;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
 }
 
 #aboutme h2 {
     background: #EBABCB;
-
     height: 150%;
-
     padding: 25px;
     margin-bottom: 2rem;
     margin-top: 2rem;
 }
 
-button {
+button{
     border: 1px solid black;
     background: #B6A6CA;
     padding: 15px;
     font-family: mainfont;
 }
-
-button:hover {
+button:hover{
     background: #86BBD8;
     border: 1px solid #EBABCB;
+}
+#gallerybtn {
+    border: 1px solid black;
+    background: #B6A6CA;
+    padding: 15px;
+    font-family: mainfont;
+    color: #000000;
+    margin-top: 6rem;
+}
+
+#gallerybtn:hover {
+    background: #86BBD8;
+    border: 1px solid #EBABCB;
+    color: #000;
+    
 }
 
 #submit {
@@ -159,9 +175,40 @@ button:hover {
     background: #86BBD8;
     border: 1px solid #EBABCB;
 }
+section{
+    margin-top: 2rem;
+    margin-bottom: 2rem
+}
+
 
 /***********************************************************************************/
 /*------------------------------------------------------------------------------------------Gallery Page----------------------------------*/
+#requestbtn{
+    border: 1px solid black;
+    background: #B6A6CA;
+    padding: 15px;
+    font-family: mainfont;
+    color: #000000;
+    margin-left: 1rem;
+}
+#requestbtn:hover{
+    background: #86BBD8;
+    border: 1px solid #EBABCB;
+    color: #000;
+}
+#returnhomebtn{
+    border: 1px solid black;
+    background: #B6A6CA;
+    padding: 15px;
+    font-family: mainfont;
+    color: #000000;
+    margin-bottom: 3rem;
+}
+#returnhomebtn:hover{
+    background: #86BBD8;
+    border: 1px solid #EBABCB;
+    color: #000;
+}
 #gallery img {
     object-fit: fill;
     margin-bottom: 2rem;
@@ -180,21 +227,13 @@ button:hover {
 #request {
     background: #AED9E0;
     width: 50%;
+    height: 100%;
     position: relative;
     left: 25%;
     margin-bottom: 5rem;
     margin-top: 2rem;
 }
 
-#requestservice {
-    margin-left: 1rem;
-}
-
-#returnhome {
-
-    margin-bottom: 3rem;
-
-}
 
 /*------------------------------------Request Service Page---------------------------------------------*/
 #requestService h2 {
@@ -210,9 +249,10 @@ form{
     margin-bottom: 3rem;
 }
 
+
 /************************---------------------------------------------------Media **------------*/
 @media(min-width: 575px) {
-    #aboutme figcaption {
+    #aboutme p {
         position: relative;
         top: 25%;
     }
@@ -225,24 +265,28 @@ form{
     }
 
     p {
-        font-size: 14px;
+        font-size: 16px;
     }
     header p{
         font-size: 12px;
     }
-    figcaption {
-        font-size: 16px;
-    }
-
+    
     #logo {
         height: 250px;
         width: 250px;
-        ;
+        
     }
 
-    #aboutme figcaption {
+    #aboutme p {
         position: relative;
         top: 20%;
+        font-size: 16px;
+    }
+}
+@media(min-width: 768px){
+    #gallerybtn{
+        position: relative;
+        top: 40%;
     }
 }
 
@@ -257,12 +301,17 @@ form{
     header p{
         font-size: 14px;
     }
-    figcaption {
+    
+    #welcome p {
+        position: relative;
+        top: 18%;
         font-size: 19px;
     }
-
-    #welcome figcaption {
+    #aboutme p{
+        font-size: 19px;
+    }
+    #gallerybtn{
         position: relative;
-        top: 20%;
+        top: 40%;
     }
 }
