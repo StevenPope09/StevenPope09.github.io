@@ -43,7 +43,6 @@ header a:hover {
     ;
 }
 
-
 footer {
     background: #F0D3F7;
     clear: both;
@@ -246,6 +245,7 @@ form{
 @media(max-width: 574px){
     nav a{
         margin-bottom: 2rem;
+        padding-left: 3px;
     }
 }
 @media(min-width: 575px) {
