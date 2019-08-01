@@ -1,17 +1,34 @@
-# StevenPope09.github.io
+# GitHub-Portfolio
 
-## This portfolio is for Designing for Wen Standards 1 Term 1905
+_______________________________________________________
 
-### Week 1
+## Portfolio For Full Sail
 
-This week I will be focusing on the HTML portion of a site that we were tasked to develop. This week has a few accomplishable tasks that I will begin work on.
+_______________________________________________________
 
-- To begin this week I have created this repository and page to build my site in.
-- Next I have scheduled an interview with my professor in order to set some goals for myself within in this course.
-- I have a fair amount of research to do this week as well so I have begun the process of watching and reading all related content to the task at hand this week.
-- I need to comb through the site provided to us to find a suitable template to further build my site on.
-- Lastly once all the other tasks are complete I will begin work on my site and stick to the parameters given with the assignment.
+## Project 1
 
+### Task Manager Web App
+
+- Use of HTML to build initial markup.
+- Use of JavaScript to read in API data and populate the App's rows of tasks.
+- Use of JavaScript to create multiple events within the HTML markup
+- Use of SASS to style the app.
+
+_______________________________________________________
+ 
+## Project 2
+ 
+### RockBand Page
+ 
+ - Band Page Template for potentail clinets who seek a site of the sort.
+ - Able to track tour dates, new singles, and bios on each band member.
+ - Blog section for the band to post their latest articles and keep their fan base involved.
+ - Contact page for fan base to reach out to the band and inquire on issues with site or just to reach out to the band. 
+ 
+ See it @ the link provided:
+[RockBand](https://stevenpope09.github.io/RockBand/)
+_______________________________________________________
 
 
 
