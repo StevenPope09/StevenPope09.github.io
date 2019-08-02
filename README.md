@@ -30,6 +30,19 @@ _______________________________________________________
 [RockBand](https://stevenpope09.github.io/RockBand/)
 _______________________________________________________
 
+## Project 3
+
+### Style by Lysette
+
+- Hair page that showcases work done
+- Allows users to request services via form element
+- Use of bootstrap in HTML to build page
+- Use of Lightbox on images in site to show users bigger, cleaner images of the thumbnails on the site
+
+See it @ the link provided below
+[Style_by_Lysette](https://stevenpope09.github.io/StyleByLysette%20/)
+_______________________________________________________
+
 
 
 
