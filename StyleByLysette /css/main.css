@@ -77,7 +77,7 @@ html {
 }
 
 h2 {
-    font-family: mainfont;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     text-transform: capitalize;
 }
 
@@ -85,7 +85,7 @@ header p{
     font-size: 10px;
 }
 p {
-    font-family: mainfont;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 14px;
 }
 
