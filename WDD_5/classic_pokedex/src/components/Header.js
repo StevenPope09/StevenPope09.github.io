@@ -1,9 +1,10 @@
 import React from 'react'
 // import logo from '../../images/logo.png'
 import { FaSignOutAlt } from 'react-icons/fa';
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { AppBar, Toolbar, Avatar, Typography, IconButton } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles({
     avatar: {
@@ -26,13 +27,17 @@ const useStyles = makeStyles({
         cursor: 'pointer',
         // margin: '5px'
     },
-    rtNav:{
+    rtNav: {
         display: 'flex',
         flexDirection: 'row',
         alignContent: 'center',
         marginRight: 25,
-       
 
+
+    },
+    button: {
+        backgroundColor: 'red',
+        color: 'white'
     }
 });
 
@@ -43,29 +48,32 @@ const Header = props => {
     return (
         <AppBar position="static">
             <Toolbar className={classes.header}>
-                <NavLink to="/Messages">
-                    {/* sign in/up button */}
-                </NavLink>
+                {/* <NavLink to="/Messages"> */}
+                {/* sign in/up button */}
+                {/* </NavLink> */}
                 <Typography variant="h1" component="h2">
                     {props.pgTitle}
                 </Typography>
                 <div className={classes.rtNav}>
+                    <Button variant="contained" className={classes.button}>
+                        Sign In/Up
+                    </Button>
                     {/* It does not like whe you use picture in the alt tag.Throws a warning. */}
-                    {/* <NavLink to="/Profile"> */}
-                        {/* You can make this an Avatar now using Material UI */}
+                    {/* <NavLink to="/Login"> */}
+                    
                     {/* <Avatar alt="Remy Sharp" src={UserImage} className={classes.avatar} /> */}
-                        {/* <img src={UserImage} alt="user" style={styles.userImg}/> */}
+                    {/* <img src={UserImage} alt="user" style={styles.userImg}/> */}
                     {/* </NavLink> */}
-                    {/* If you use the image you dont need the FaCog icon. */}
+                    
                     {/* <NavLink to="/Profile" style={styles.anchor}><FaCog /></NavLink> */}
                     {/* <NavLink to="/NewsFeed"> */}
-                        {/* <IconButton */}
-                            {/* edge="end" */}
-                            {/* className={classes.menuButton} */}
-                            {/* color="secondary" */}
-                        {/* > */}
-                            {/* <FaSignOutAlt /> */}
-                        {/* </IconButton> */}
+                    {/* <IconButton */}
+                    {/* edge="end" */}
+                    {/* className={classes.menuButton} */}
+                    {/* color="secondary" */}
+                    {/* > */}
+                    {/* <FaSignOutAlt /> */}
+                    {/* </IconButton> */}
                     {/* </NavLink> */}
                 </div>
             </Toolbar>
