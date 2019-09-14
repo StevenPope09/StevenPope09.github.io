@@ -1,8 +1,8 @@
 import React from 'react'
 // import logo from '../../images/logo.png'
-import { FaSignOutAlt } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom'
-import { AppBar, Toolbar, Avatar, Typography, IconButton } from '@material-ui/core';
+
+// import { NavLink } from 'react-router-dom'
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 

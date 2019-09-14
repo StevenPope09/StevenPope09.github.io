@@ -30,7 +30,8 @@ fetch(completeUrl)
             pokemonInfo += '<h2>' + data.name + '</h2>'
             pokemonInfo += '<p>' + data.id + '</p>'
             pokemonInfo += '<img src="' + data.sprites.front_default + '"/>'
-            pokemonInfo += '<p>' + data.weight + '</p>'
+            pokemonInfo += '<p>' + data.types[0].type.name + '</p>'
+            pokemonInfo += '<p>' + data.types[1].type.name + '</p>'
             pokemonInfo += '</div>'
 
             apiTest.innerHTML = pokemonInfo;
