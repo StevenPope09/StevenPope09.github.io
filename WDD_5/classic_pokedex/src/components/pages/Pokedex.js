@@ -10,7 +10,10 @@ const useStyles = makeStyles(theme => ({
         // backgroundColor: theme.palette.background.paper,
         //maxWidth: 900,
         marginRight: 25,
+        
     },
+    
+    
 }));
 
 export default function UserProfile() {
@@ -19,11 +22,34 @@ export default function UserProfile() {
     let [pokeName, setPokeName] = useState("");
     let [pokeId, setPokeId] = useState("");
     let [pokeImg, setPokeImg] = useState("");
-    let [pokeType1, setPokeType1] = useState("");
-    let [pokeType2, setPokeType2] = useState("");
+    let [pokeType, setPokeType] = useState("");
     let [pokemonArray, setPokemonArray] = useState([]);
 
-    let key = 1;
+    let key = []
+
+    
+
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+        .then(res => {
+            if (res.ok) {
+                return res.json();
+            } else {
+                throw res
+            }
+        })
+
+        .then(pokeData => {
+            //console.log(pokeData.results.length);
+            for(let i=0; i<pokeData.results.length; i++){
+                key[i] = pokeData.results[i].name
+            }
+            
+            //console.log(key);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    
 
     function loadPokemon(pKey) {
 
@@ -39,35 +65,39 @@ export default function UserProfile() {
             })
 
             .then(data => {
-
+                let type = []
+                if(data.types.length > 1){
+                    type = [data.types[0].type.name,"/", data.types[1].type.name]
+                } else {
+                    type = [data.types[0].type.name]
+                }
                 let pokeObj = {
-                    name : data.name,
-                    id : data.id,
-                    img : data.sprites.front_default,
-                    type1 : data.types[0].type.name,
-                    type2 : data.types[1].type.name
-//make poke types an array
-                }    
-                let tempArr = [...pokemonArray,pokeObj]
+                    name: data.name,
+                    id: data.id,
+                    img: data.sprites.front_default,
+                    type: type
+                    
+                }
+                let tempArr = [...pokemonArray, pokeObj]
                 setPokemonArray(tempArr)
-                
-                console.log("Temp Array",tempArr);
-                
+
+                console.log("Temp Array", tempArr);
+
                 setPokeName(pokeObj.name);
 
-                
+
                 setPokeId(pokeObj.id);
 
-                
+
                 setPokeImg(pokeObj.img);
 
-                
-                setPokeType1(pokeObj.type1);
+
+                setPokeType(pokeObj.type);
+
 
                 
-                setPokeType2(pokeObj.type2);
 
-                
+
 
             })
             .catch(err => {
@@ -80,44 +110,20 @@ export default function UserProfile() {
 
 
     return (
-        <div className={classes.root}>
+        <div className={styles.root}>
             <div style={styles.topBar}>Pokedex</div>
-            <div style={styles.form}>
-                <button onClick={()=>{loadPokemon(1)}}>Load Pokemon</button>
+            
+            <Button variant="contained" color="secondary" className={classes.button} onClick={() => {loadPokemon(key[136])}}>Load Pokemon</Button>
+            <Grid container spacing={4}>
+                <Grid item xs={4}>
+                    <div style={styles.form}>
                 
-                    {pokemonArray.map((item,key)=>{
-                    return <Pokemon key={key} poke={item}/>
-                })}
-                
-                
-                
-                <Grid container spacing={3} style={styles.container}>
-                    <Grid item xs={3}>
-                        <h3>Pokemon Name</h3>
-                        <p style={styles.input}>{pokeName}</p>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <h3>Pokemon ID</h3>
-                        <p style={styles.input}>{pokeId}</p>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <h3>Type</h3>
-                        <p style={styles.input}>{pokeType1} {pokeType2}</p>
-                    </Grid>
-                    <Grid item xs={3}>
-                        <h3>Picture</h3>
-                        <img src={pokeImg} style={styles.pokeImg} onChange={(e) => {
-                            setPokeImg(e.target.value);
-                        }} />
-                    </Grid>
-
-                    {/* <Grid item xs={8} style={styles.buttonRow}>
-                        <Button variant="contained" component="span" color="primary" onClick={loadPokemon()}>
-                            Load Pokemon
-                        </Button>
-                    </Grid> */}
+                        {pokemonArray.map((item, key) => {
+                            return <Pokemon key={key} poke={item} />
+                        })}
+                    </div>
                 </Grid>
-            </div>
+            </Grid>
         </div>
     );
 }
@@ -162,11 +168,14 @@ const styles = {
         marginTop: '3%'
     },
     form: {
-        fontSize: '1.5em'
+        fontSize: '1.5em',
+        
+        
     },
     pokeImage: {
         height: '100px',
         width: '75px'
-    }
+    },
+    
 
 }
