@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Pokemon from '../Pokemon';
-import Search from  '../Search'
+import Search from '../Search'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -11,128 +11,77 @@ const useStyles = makeStyles(theme => ({
         // backgroundColor: theme.palette.background.paper,
         //maxWidth: 900,
         marginRight: 25,
-        
+
     },
-    
-    
+
+
 }));
 
-export default function UserProfile() {
+export default function UserProfile(props) {
     const classes = useStyles();
 
-    let [pokeName, setPokeName] = useState("");
-    let [pokeId, setPokeId] = useState("");
-    let [pokeImg, setPokeImg] = useState("");
-    let [pokeType, setPokeType] = useState("");
-    let [pokemonArray, setPokemonArray] = useState([]);
-
+    let [masterPokemonArray, setMasterPokemonArray] = useState([]); // current page of pokemen
     let [search, setSearch] = useState("")
+    let [next, setNext] = useState("")
 
-    let key = []
+    // pass in array of pokemon index objects
+    // return an array of pokemon detail objects
+    async function getPokemonDetails(indexObjects) {
+        let pokemonArr = [];
 
-    
+        for (let result of indexObjects) {
+            let { url } = result;
+            let pokemenRes = await fetch(url);
+            let pokemenJson = await pokemenRes.json();
+            pokemonArr.push(pokemenJson);
 
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
-        .then(res => {
-            if (res.ok) {
-                return res.json();
-            } else {
-                throw res
-            }
-        })
+        }
 
-        .then(pokeData => {
-            //console.log(pokeData.results.length);
-            for(let i=0; i<pokeData.results.length; i++){
-                key[i] = pokeData.results[i].name
-            }
-            
-            //console.log(key);
-        })
-        .catch(error => {
-            console.log(error);
-        });
-    
-
-    function loadPokemon(pKey) {
-
-        fetch(`https://pokeapi.co/api/v2/pokemon/${pKey}`)
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-
-
-                } else {
-                    throw response;
-                }
-            })
-
-            .then(data => {
-                let type = []
-                if(data.types.length > 1){
-                    type = [data.types[0].type.name,"/", data.types[1].type.name]
-                } else {
-                    type = [data.types[0].type.name]
-                }
-                let pokeObj = {
-                    name: data.name,
-                    id: data.id,
-                    img: data.sprites.front_default,
-                    type: type
-                    
-                }
-                let tempArr = [...pokemonArray, pokeObj]
-                setPokemonArray(tempArr)
-
-                console.log("Temp Array", tempArr);
-
-                setPokeName(pokeObj.name);
-
-
-                setPokeId(pokeObj.id);
-
-
-                setPokeImg(pokeObj.img);
-
-
-                setPokeType(pokeObj.type);
-
-
-                
-
-
-
-            })
-            .catch(err => {
-                console.log(err);
-            });
-
+        return pokemonArr;
     }
 
+    useEffect(() => {
 
+        init();
+        async function init() {
+
+            let res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=5");
+            let json = await res.json();
+            let { next } = json;
+            setNext(next);
+            let pokemenArr = await getPokemonDetails(json.results)
+            setMasterPokemonArray(pokemenArr);
+        }
+
+    }, []) // == componentDidMount
+
+    async function onLoadMore() {
+        // console.log('load more');
+        let res = await fetch(next);
+        let json = await res.json();
+         setNext(json.next);
+        let pokemonArr = await getPokemonDetails(json.results);
+        let newPokemonArr = [...masterPokemonArray, ...pokemonArr];
+        setMasterPokemonArray(newPokemonArr);
+    }
 
 
     return (
         <div className={styles.root}>
-        <Search searchPoke={(e) => {
-        e.preventDefault()
-        let key = search.value
-        setSearch(key)
-        }} />
+            <Search searchPoke={(e) => {
+                e.preventDefault()
+                let key = search.value;
+                setSearch(key)
+            }} />
             <div style={styles.topBar}>Pokedex</div>
-            
-            <Button variant="contained" color="secondary" className={classes.button} onClick={() => {loadPokemon(key[136])}}>Load Pokemon</Button>
-            <Grid container spacing={4}>
-                <Grid item xs={4}>
-                    <div style={styles.form}>
-                
-                        {pokemonArray.map((item, key) => {
-                            return <Pokemon key={key} poke={item} />
-                            
-                        })}
-                    </div>
-                </Grid>
-            </Grid>
+
+            <div style={styles.pokemonList}>
+                {masterPokemonArray.map((pokemon) => {
+                    return <Pokemon key={pokemon.id} pokemon={pokemon} />
+                })}
+            </div>
+
+            <Button variant="contained" color="primary" onClick={onLoadMore}>Load more</Button>
         </div>
     );
 }
@@ -176,15 +125,15 @@ const styles = {
         marginLeft: '3%',
         marginTop: '3%'
     },
-    form: {
+    pokemonList: {
         fontSize: '1.5em',
-        
-        
+        display: "flex",
+        flexWrap: 'wrap',
     },
     pokeImage: {
         height: '100px',
         width: '75px'
     },
-    
+
 
 }
