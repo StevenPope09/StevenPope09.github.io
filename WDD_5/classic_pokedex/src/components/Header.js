@@ -1,5 +1,5 @@
 import React from 'react'
-// import logo from '../../images/logo.png'
+import Logo from '../images/logo.png'
 
 // import { NavLink } from 'react-router-dom'
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
@@ -51,11 +51,12 @@ const Header = props => {
                 {/* <NavLink to="/Messages"> */}
                 {/* sign in/up button */}
                 {/* </NavLink> */}
+                <img src={Logo} alt='Logo' className={classes.logo} />
                 <Typography variant="h1" component="h2">
                     {props.pgTitle}
                 </Typography>
                 <div className={classes.rtNav}>
-                    <Button variant="contained" className={classes.button}>
+                    <Button variant="contained" color="secondary" className={classes.button}>
                         Sign In/Up
                     </Button>
                     {/* It does not like whe you use picture in the alt tag.Throws a warning. */}

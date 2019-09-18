@@ -6,29 +6,34 @@ export default class Pokemon extends Component {
     render() {
 
         return (
-            <div>
-                <Grid container spacing={4}>
-                    <Grid item xs={4}>
+            <div style={styles.container}>
+                <Grid container spacing={3}>
+                    
+                    <Grid item xs={3}>
                         <div>
-                            <h3>Pokemon Name</h3>
-                            <h1><em>{this.props.poke.name}</em></h1>
+                            <p>{this.props.poke.id}</p>
                         </div>
                         <div>
-                            <h3>Pokemon ID</h3>
-                            <h1>{this.props.poke.id}</h1>
+                            <p>{this.props.poke.name} </p>
                         </div>
                         <div>
-                            <h3>Type</h3>
-                            <h1>{this.props.poke.type}</h1>
+                            <p>{this.props.poke.type}</p>
                         </div>
                         <div>
-                            <h3>Picture</h3>
                             <img src={this.props.poke.img} alt="" />
                         </div>
-
+                        <div>
+                            <button>Add to Collection</button>
+                        </div>
                     </Grid>
                 </Grid>
             </div>
         )
+    }
+}
+
+let styles = {
+    container: {
+        border: '1px solid black'
     }
 }

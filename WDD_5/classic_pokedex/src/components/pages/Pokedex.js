@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Pokemon from '../Pokemon'
+import Pokemon from '../Pokemon';
+import Search from  '../Search'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -24,6 +25,8 @@ export default function UserProfile() {
     let [pokeImg, setPokeImg] = useState("");
     let [pokeType, setPokeType] = useState("");
     let [pokemonArray, setPokemonArray] = useState([]);
+
+    let [search, setSearch] = useState("")
 
     let key = []
 
@@ -111,6 +114,11 @@ export default function UserProfile() {
 
     return (
         <div className={styles.root}>
+        <Search searchPoke={(e) => {
+        e.preventDefault()
+        let key = search.value
+        setSearch(key)
+        }} />
             <div style={styles.topBar}>Pokedex</div>
             
             <Button variant="contained" color="secondary" className={classes.button} onClick={() => {loadPokemon(key[136])}}>Load Pokemon</Button>
@@ -120,6 +128,7 @@ export default function UserProfile() {
                 
                         {pokemonArray.map((item, key) => {
                             return <Pokemon key={key} poke={item} />
+                            
                         })}
                     </div>
                 </Grid>

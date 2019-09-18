@@ -8,8 +8,9 @@ const Search = props => {
             style={styles.searchForm}
             onSubmit={props.searchPoke}>
             <div style={styles.searchBar}>
-                <div>
+                <div class="md-form mt-0">
                     <input
+                        class= "form-control"
                         value={props.search}
                         onChange={props.onSearchChange}
                         style={styles.input}
@@ -43,6 +44,7 @@ const styles = {
         height: '35px',
         width: '40%',
         marginLeft: '21%',
+        marginRight: '1%',
         fontSize: '1.0em',
         borderRadius: '15px',
         border: '.5px solid black',
