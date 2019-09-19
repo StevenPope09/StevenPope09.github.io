@@ -55,13 +55,13 @@ export default function Pokemon(props) {
 
 let styles = {
     container: {
-        border: '1px solid black',
+        border: '2px solid black',
         display: "flex",
         flexDirection: "column",
         margin: '2%',
-        justifyContent: 'space-around',
+        //justifyContent: 'space-around',
         backgroundColor: 'white',
-        justifyContent: 'center',
+        //justifyContent: 'center',
         
     },
     pokeInfo: {
