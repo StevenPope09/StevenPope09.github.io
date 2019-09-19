@@ -1,19 +1,29 @@
-import React,{ useState}from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header'
-import Pokedex from './components/pages/Pokedex'
-import Search from './components/Search'
 import Footer from './components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import "./App.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+import Pokedex from './components/pages/Pokedex';
+import Collection from './components/pages/Collection';
 
 function App() {
-  
+
+  useEffect(() => {
+    if (localStorage.getItem("collection") == null) {
+      localStorage.setItem("collection", JSON.stringify([]));
+    }
+  }, []);
 
   return (
-    <div className="App">
-      <Header pgTitle="Classic Pokedex" />
-    
-      <Pokedex />
-    </div>
+    <Router>
+      <div className="App">
+        <Header pgTitle="Classic Pokedex" />
+        <Route path="/" exact component={Pokedex} />
+        <Route path="/collection/" component={Collection} />
+      </div>
+    </Router>
   );
 }
 

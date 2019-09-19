@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 import Pokemon from '../Pokemon';
 import Search from '../Search'
+import { Container } from 'react-bootstrap';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -17,10 +17,10 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-export default function UserProfile(props) {
+export default function Pokedex(props) {
     const classes = useStyles();
 
-    let [masterPokemonArray, setMasterPokemonArray] = useState([]); // current page of pokemen
+    let [masterPokemonArray, setMasterPokemonArray] = useState([]); // current page of pokemon
     let [search, setSearch] = useState("")
     let [next, setNext] = useState("")
 
@@ -31,9 +31,9 @@ export default function UserProfile(props) {
 
         for (let result of indexObjects) {
             let { url } = result;
-            let pokemenRes = await fetch(url);
-            let pokemenJson = await pokemenRes.json();
-            pokemonArr.push(pokemenJson);
+            let pokemonRes = await fetch(url);
+            let pokemonJson = await pokemonRes.json();
+            pokemonArr.push(pokemonJson);
 
         }
 
@@ -45,12 +45,12 @@ export default function UserProfile(props) {
         init();
         async function init() {
 
-            let res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=5");
+            let res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=12");
             let json = await res.json();
             let { next } = json;
             setNext(next);
-            let pokemenArr = await getPokemonDetails(json.results)
-            setMasterPokemonArray(pokemenArr);
+            let pokemonArr = await getPokemonDetails(json.results)
+            setMasterPokemonArray(pokemonArr);
         }
 
     }, []) // == componentDidMount
@@ -59,7 +59,7 @@ export default function UserProfile(props) {
         // console.log('load more');
         let res = await fetch(next);
         let json = await res.json();
-         setNext(json.next);
+        setNext(json.next);
         let pokemonArr = await getPokemonDetails(json.results);
         let newPokemonArr = [...masterPokemonArray, ...pokemonArr];
         setMasterPokemonArray(newPokemonArr);
@@ -68,20 +68,34 @@ export default function UserProfile(props) {
 
     return (
         <div className={styles.root}>
-            <Search searchPoke={(e) => {
-                e.preventDefault()
-                let key = search.value;
-                setSearch(key)
-            }} />
-            <div style={styles.topBar}>Pokedex</div>
 
-            <div style={styles.pokemonList}>
-                {masterPokemonArray.map((pokemon) => {
-                    return <Pokemon key={pokemon.id} pokemon={pokemon} />
-                })}
+
+
+            <div style={styles.backDrop}>
+                <Container>
+                    <div style={styles.topBar}><h1>Pokedex</h1></div>
+                </Container>
+                <Container>
+                    <div>
+                        <Search searchPoke={(e) => {
+                            e.preventDefault()
+                            let key = search.value;
+                            setSearch(key)
+                        }} />
+                    </div>
+                    <div className="pokemonList">
+                        {masterPokemonArray.map((pokemon) => {
+                            return <Pokemon key={pokemon.id} pokemon={pokemon} disableAdd={false} />
+                        })}
+                    </div>
+                    <div style={styles.buttonDiv}>
+                        <Button style={styles.loadButton} variant="contained" onClick={onLoadMore}>Load more</Button>
+                    </div>
+
+                </Container>
             </div>
 
-            <Button variant="contained" color="primary" onClick={onLoadMore}>Load more</Button>
+
         </div>
     );
 }
@@ -89,51 +103,35 @@ export default function UserProfile(props) {
 const styles = {
     topBar: {
         padding: "10px",
-        backgroundColor: "#ebebeb",
+
         display: "flex",
-        border: "1px solid black",
-        marginTop: "10px"
+        //border: "1px solid black",
+        marginTop: "10px",
+        justifyContent: 'center',
+        color: 'white'
     },
-    userAvatarAndName: {
-        display: "flex",
-        padding: "30px"
-    },
-    subtitle: {
-        fontSize: "10px",
-        textAlign: "left"
-    },
-    username: {
-        textAlign: "left"
-    },
-    usernameAndSubtitle: {
-        marginLeft: "10px",
-        paddingTop: "5px",
-        marginBottom: '15px'
-    },
-    input: {
-        marginLeft: "10px",
-        fontSize: '.75em',
-        marginBottom: '15px'
-    },
-    container: {
-        paddingLeft: '20%'
+    backDrop: {
+        backgroundColor: '#1C3144',
+        marginLeft: '20%',
+        marginRight: '20%',
+        marginTop: '2%'
 
     },
-    buttonRow: {
-        display: "flex",
-        justifyContent: "center",
-        marginLeft: '3%',
-        marginTop: '3%'
+    loadMore: {
+
     },
-    pokemonList: {
-        fontSize: '1.5em',
-        display: "flex",
-        flexWrap: 'wrap',
+    buttonDiv: {
+        display: 'flex',
+        justifyContent: 'center',
+        marginBottom: '2%',
+        marginTop: '2%'
     },
-    pokeImage: {
-        height: '100px',
-        width: '75px'
-    },
+    loadButton: {
+        marginTop: '2%',
+        marginBottom: '2%',
+        backgroundColor: '#FF0000',
+        color: 'white'
+    }
 
 
 }
