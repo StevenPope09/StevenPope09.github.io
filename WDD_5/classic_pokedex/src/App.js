@@ -4,9 +4,9 @@ import Footer from './components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./App.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
 import Pokedex from './components/pages/Pokedex';
 import Collection from './components/pages/Collection';
+
 
 function App() {
 
@@ -22,6 +22,8 @@ function App() {
         <Header pgTitle="Classic Pokedex" />
         <Route path="/" exact component={Pokedex} />
         <Route path="/collection/" component={Collection} />
+        
+
       </div>
     </Router>
   );
