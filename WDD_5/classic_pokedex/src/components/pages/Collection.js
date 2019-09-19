@@ -2,7 +2,8 @@ import React, { Component, useEffect, useState } from 'react'
 import Pokemon from '../Pokemon';
 import { Container } from 'react-bootstrap';
 import Search from '../Search'
-
+import Card1 from '../cards/Card1'
+import Card2 from '../cards/Card2'
 
 export default function Collection(props) {
 
@@ -35,6 +36,12 @@ export default function Collection(props) {
                         })}
                     </div>
                 </Container>
+                <Container >
+                    <div style={styles.cards}>
+                        <Card1 />
+                        <Card2 />
+                    </div>
+                </Container>
             </div>
         </div>
     )
@@ -58,5 +65,12 @@ const styles = {
         //marginTop: '2%'
 
     },
+    cards: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        paddingBottom: '3%',
+        marginTop: '5%'
+    }
+
 
 }

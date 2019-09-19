@@ -3,7 +3,9 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Pokemon from '../Pokemon';
 import Search from '../Search'
-import { Container } from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
+import Card1 from '../cards/Card1'
+import Card2 from '../cards/Card2'
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -93,6 +95,12 @@ export default function Pokedex(props) {
                     </div>
 
                 </Container>
+                <Container >
+                    <div style={styles.cards}>
+                        <Card1 />
+                        <Card2 />
+                    </div>
+                </Container>
             </div>
 
 
@@ -131,6 +139,11 @@ const styles = {
         marginBottom: '2%',
         backgroundColor: '#FF0000',
         color: 'white'
+    },
+    cards: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        paddingBottom: '3%'
     }
 
 
