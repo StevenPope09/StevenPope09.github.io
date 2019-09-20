@@ -1,26 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
 import Pokemon from '../Pokemon';
 import Search from '../Search'
-import { Container} from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 import Card1 from '../cards/Card1'
 import Card2 from '../cards/Card2'
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        flexGrow: 1,
-        // backgroundColor: theme.palette.background.paper,
-        //maxWidth: 900,
-        marginRight: 25,
-
-    },
-
-
-}));
-
 export default function Pokedex(props) {
-    const classes = useStyles();
+    
 
     let [masterPokemonArray, setMasterPokemonArray] = useState([]); // current page of pokemon
     let [search, setSearch] = useState("")
@@ -69,9 +56,7 @@ export default function Pokedex(props) {
 
 
     return (
-        <div className={styles.root}>
-
-
+        <div>
 
             <div style={styles.backDrop}>
                 <Container>
@@ -97,8 +82,16 @@ export default function Pokedex(props) {
                 </Container>
                 <Container >
                     <div style={styles.cards}>
-                        <Card1 />
-                        <Card2 />
+                        <Row>
+                            <Col xs={12} sm={12}  lg={6} style={styles.cards}>
+                                <Card1 />
+                            </Col>
+                            <Col xs={12} sm={12} md={6} lg={6} style={styles.cards}>
+                                <Card2 />
+                            </Col>
+                        </Row>
+
+
                     </div>
                 </Container>
             </div>
@@ -141,9 +134,10 @@ const styles = {
         color: 'white'
     },
     cards: {
-        display: 'flex',
-        justifyContent: 'space-around',
-        paddingBottom: '3%'
+        //display: 'flex',
+        //justifyContent: 'space-around',
+        paddingBottom: '3%',
+        marginBottom: '1em'
     }
 
 

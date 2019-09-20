@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from 'react'
 import Pokemon from '../Pokemon';
-import { Container } from 'react-bootstrap';
+import { Container, Col, Row } from 'react-bootstrap';
 import Search from '../Search'
 import Card1 from '../cards/Card1'
 import Card2 from '../cards/Card2'
@@ -38,8 +38,16 @@ export default function Collection(props) {
                 </Container>
                 <Container >
                     <div style={styles.cards}>
-                        <Card1 />
-                        <Card2 />
+                        <Row>
+                            <Col xs={12} sm={12}  lg={6} style={styles.cards}>
+                                <Card1 />
+                            </Col>
+                            <Col xs={12} sm={12} md={6} lg={6} style={styles.cards}>
+                                <Card2 />
+                            </Col>
+                        </Row>
+
+
                     </div>
                 </Container>
             </div>
