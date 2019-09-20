@@ -5,7 +5,7 @@ import { Navbar, NavDropdown, Form, Nav, FormControl, Button } from 'react-boots
 const Search = props => {
     return (
         <Form inline style={styles.form}>
-            <FormControl style={styles.search} type="text" placeholder="Search" className="mr-sm-2" />
+            <FormControl style={styles.search} type="text" placeholder="Enter Name or ID" className="mr-sm-2" />
             <Button style={styles.srchButton} variant="outline-success">Search</Button>
         </Form>
     )
