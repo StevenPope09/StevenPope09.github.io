@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container } from 'react-bootstrap';
+import { Container, Col } from 'react-bootstrap';
 
 
 export default function Pokemon(props) {
@@ -24,30 +24,29 @@ export default function Pokemon(props) {
     }
 
     return (
+        <Col xs={12} sm={12} md={6} lg={4} xl={3}>
+            <div style={styles.container}>
+                <Container style={styles.pokeInfo}>
 
-        <div style={styles.container}>
-            <Container style={styles.pokeInfo}>
-                <div>
-                    <p>{id}</p>
-                </div>
-                <div>
-                    <p>{name} </p>
-                </div>
-                <div>
-                    <img src={front_default} />
-                </div>
-                {typeNames.map((name) => {
-                    return <div style={styles.types}> {name}</div>
-                })}
-                <div >
-                    {!disableAdd && <button style={styles.addColl} onClick={onAddToCollection}>Add to Collection</button>}
-                </div>
+                    <div>
+                        <p>{id}</p>
+                    </div>
+                    <div>
+                        <p>{name} </p>
+                    </div>
+                    <div>
+                        <img src={front_default} />
+                    </div>
+                    {typeNames.map((name) => {
+                        return <div style={styles.types}> {name}</div>
+                    })}
+                    <div >
+                        {!disableAdd && <button style={styles.addColl} onClick={onAddToCollection}>Add to Collection</button>}
+                    </div>
 
-
-            </Container>
-
-
-        </div>
+                </Container>
+            </div>
+        </Col>
 
 
     )
@@ -58,11 +57,11 @@ let styles = {
         border: '2px solid black',
         display: "flex",
         flexDirection: "column",
-        margin: '2%',
-        //justifyContent: 'space-around',
+        marginBottom: '4%',
+        //justifyContent: 'space-between',
         backgroundColor: 'white',
         //justifyContent: 'center',
-        
+
     },
     pokeInfo: {
         textAlign: 'center',
