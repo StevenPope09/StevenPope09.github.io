@@ -10,7 +10,7 @@ export default class Card1 extends Component {
             <div>
                 <Card style={styles.cardBody}>
                     <div>
-                        <Card.Img variant="top" src={PokemonGo} />
+                        <Card.Img style={styles.pokeImg} variant="right" src={PokemonGo} />
                     </div>
                     <div>
                         <Card.Body>
@@ -35,8 +35,8 @@ export default class Card1 extends Component {
 }
 const styles = {
     cardBody: {
-        width: '22rem',
-        display: 'flex',
-        flexDirection: 'column'
+        //width: '15rem',
+        //display: 'flex',
+        //flexDirection: 'column'
     }
 }

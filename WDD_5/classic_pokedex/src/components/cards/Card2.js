@@ -22,7 +22,7 @@ export default class Card2 extends Component {
 
 const styles = {
     cardBody: {
-        width: '22rem',
-        height: '20rem'
+        //width: '22rem',
+        //height: '20rem'
     }
 }
