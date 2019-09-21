@@ -64,11 +64,17 @@ export default function Pokedex(props) {
                 </Container>
                 <Container>
                     <div>
-                        <Search searchPoke={(e) => {
-                            e.preventDefault()
-                            let key = search.value;
-                            setSearch(key)
-                        }} />
+                    <Search
+                            onSearchChange={(e) => {
+                                e.preventDefault()
+                                setSearch(e.target.value.toLowerCase())
+                            }}
+                            onSearchClick={() => {
+                                console.log(search);
+                                props.history.push("/pokemon/" + search);
+                            }}
+
+                        />
                     </div>
                     <div className="pokemonList">
                         {masterPokemonArray.map((pokemon) => {
