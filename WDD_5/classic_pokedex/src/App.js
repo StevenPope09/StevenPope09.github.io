@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 import Pokedex from './components/pages/Pokedex';
 import Collection from './components/pages/Collection';
 import Home from './components/pages/Home';
+import PokemonDetail from './components/pages/PokemonDetail';
+
 //import { Container } from 'react-bootstrap';
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/pokedex" exact component={Pokedex} />
         <Route path="/collection/" component={Collection} />
+        <Route path="/pokemon/:idOrName" component={PokemonDetail} />
         <Footer />
 
       </div>
