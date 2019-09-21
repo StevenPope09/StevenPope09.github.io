@@ -5,8 +5,10 @@ import { Form, FormControl, Button } from 'react-bootstrap';
 const Search = props => {
     return (
         <Form inline style={styles.form}>
-            <FormControl style={styles.search} type="text" placeholder="Enter Name or ID" className="mr-sm-2" />
-            <Button style={styles.srchButton} variant="outline-success">Search</Button>
+            <FormControl style={styles.search} type="text" placeholder="Enter Name or ID" className="mr-sm-2"
+                onChange={props.onSearchChange}
+            />
+            <Button onClick={props.onSearchClick} style={styles.srchButton} variant="outline-success">Search</Button>
         </Form>
     )
 }
