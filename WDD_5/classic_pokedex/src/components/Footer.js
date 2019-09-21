@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer style={styles.footer}>
             <Container>
-                <h4>Steven Pope Design & Development 2019 All Rights reserved.  </h4>
+                <h4>Steven Pope Design & Development ©2019 All Rights reserved.  </h4>
                 <p>Email: <a style={styles.anchor} href="mailto: sjpope@student.fullsail.edu">Sjpope@student.fullsail.edu</a></p>
                 <p>Phone Number: (210) 216-4119</p>
                 <p>Address: 1234 Somewhere Street, Some Place NA 12345</p>
