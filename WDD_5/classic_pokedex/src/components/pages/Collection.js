@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Pokemon from '../Pokemon';
 import { Container, Col, Row } from 'react-bootstrap';
 import Search from '../Search'

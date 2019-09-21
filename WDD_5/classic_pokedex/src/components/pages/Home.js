@@ -17,10 +17,10 @@ export default class Home extends Component {
                 <Container>
                     <h2 style={styles.topBar}>Latest News</h2>
                     <Row style={styles.news}>
-                        <Col>
+                        <Col xs={12} lg={6}>
                             <Caruosel1 />
                         </Col>
-                        <Col>
+                        <Col xs={12} lg={6}>
                             <Caruosel2 />
                         </Col>
                         

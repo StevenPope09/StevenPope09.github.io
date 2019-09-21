@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Card, Button } from 'react-bootstrap';
+import { Card} from 'react-bootstrap';
 import AdPic from '../../images/adPic.jpeg'
 
 export default class Card2 extends Component {

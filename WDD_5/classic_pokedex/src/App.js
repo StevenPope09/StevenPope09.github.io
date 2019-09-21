@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header'
 import Footer from './components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./App.css";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route} from "react-router-dom";
 import Pokedex from './components/pages/Pokedex';
 import Collection from './components/pages/Collection';
 import Home from './components/pages/Home';
-import { Container } from 'react-bootstrap';
+//import { Container } from 'react-bootstrap';
 
 function App() {
 
