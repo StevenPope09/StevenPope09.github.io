@@ -12,22 +12,27 @@ const Header = props => {
     return (
 
         <Navbar style={styles.navBar} expand="lg">
-
-            <Navbar.Brand href="/"> <Image style={styles.logo} src={Logo} fluid /></Navbar.Brand>
-            <Container style={styles.titleCon}>
+            <div>
+                <Navbar.Brand href="/"> <Image style={styles.logo} src={Logo} fluid /></Navbar.Brand>
+            </div>
+            
+            <div style={styles.title}>
                 <Navbar.Brand href="/" style={styles.title}>Personal Pokedex</Navbar.Brand>
-            </Container>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Container style={styles.linkCon}>
+            </div>
+
+            <div>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav" >
+                    {/* <Container style={styles.linkCon}> */}
                     <Nav className="mr-auto">
                         <div style={styles.linkDiv}>
                             <Nav.Link style={styles.links} href="/pokedex">Pokedex</Nav.Link>
                             <Nav.Link style={styles.links} href="/collection">Collections</Nav.Link>
                         </div>
                     </Nav>
-                </Container>
-            </Navbar.Collapse>
+                    
+                </Navbar.Collapse>
+            </div>
 
         </Navbar >
 
@@ -45,9 +50,9 @@ let styles = {
         backgroundColor: '#203FED',
         color: 'white',
         width: '100%',
-        //display: 'flex',
+        display: 'flex',
         //flexFlow: 'row wrap',
-        //justifyContent: 'flex-end'
+        justifyContent: 'space-between'
 
 
     },
@@ -60,8 +65,9 @@ let styles = {
     },
     title: {
         color: 'white',
-        fontSize: '45px',
-        marginLeft: '35%'
+        fontSize: '1.55em',
+        //border: '1px solid white'
+        //marginLeft: '35%'
         //justifyContent: 'center'
 
     },
@@ -70,16 +76,10 @@ let styles = {
         //flexDirection: 'column',
         //float: 'right',
         //border: '1px solid red',
-        marginLeft: '10%'
+        //marginLeft: '10%'
 
     },
-    linkCon: {
-        //border: '1px solid white',
-        width: '55%'
-    },
-    titleCon: {
-        //border: '1px solid white',
-        marginLeft: '14%'
-    }
+    
+
 
 }

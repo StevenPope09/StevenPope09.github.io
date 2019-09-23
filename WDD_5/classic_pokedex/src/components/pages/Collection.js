@@ -15,6 +15,24 @@ export default function Collection(props) {
         setCollection(collection);
     }, [])
 
+    function filterData() {
+        //check if search is empty if so display all data if not filter based on input
+        if(search == ""){
+            return collection
+        }
+        else{
+            return collection.filter((currentObj) => {
+                if (currentObj.name.inludes(search)) {
+                    return true;
+                } 
+                else {
+                  return false;
+                }
+            })
+
+        }
+    }
+
     return (
         <div>
             
