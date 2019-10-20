@@ -40,7 +40,7 @@ _______________________________________________________
 - Use of Lightbox on images in site to show users bigger, cleaner images of the thumbnails on the site
 
 See it @ the link provided below
-[Style_by_Lysette](https://stevenpope09.github.io/StyleByLysette%20/)
+[Style_by_Lysette](https://stevenpope09.github.io/StyleByLysette/index.html)
 _______________________________________________________
 
 
