@@ -2,78 +2,121 @@ html{
     font-size:62.5%;
 }
 body{
-    font: 2.8rem/1.25 "Superclarendon", arial, sans-serif;
+    font-size: 2.8em;
+    font-family: fantasy;
     background: url("../images/background.jpg") fixed no-repeat;
     background-position-y: -25rem;
     background-size: 100%;
     color: #fff;
 }
+main{
+    border: 2px solid white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    background: rgba(0,0,0,.8);
+    margin-top: 5%;
+}
 header{
-    background: rgba(0,0,0,.5);
+    background: rgba(0,0,0,.65);
     padding-bottom: 1rem;
 
 }
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
 nav li{
     font-size: 2.8rem;
-    text-align: center;
-    display: inline-block;
-    margin-right: 2rem;
-    margin-left: 5rem;
+    list-style: none;
+    text-decoration: underline;
     color: #fff;
     opacity: .7;
 }
 nav a{
     color: #fff;
-
+}
+nav a:hover{
+    color: #FA9C1D;
 }
 #home,#userNav,#oppSearchNav,#breakdownNav,#contactnav{
     color: #FA9C1D;
 }
-.statBoxes{
-    display: inline-block;
-    width: calc(50%);
-    float: left;
+#topHeader{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
 }
-#findStats{
-    margin-left: 25%;
-}
-.wrapper{
-    max-width: 1500px;
-    margin: 0 auto;
-}
-header h1{
-    margin-right: 12rem;
-    margin-left: 2rem;
-    float: left;
+#topHeader h2{
+    padding-top: 7%;
 }
 header h2{
     font-size: 4.7rem;
-    float: left;
+    text-transform: uppercase;
+}
+#owTitle{
+    background: #FA9C1D;
+    color: #4A4C4E;
+    padding: 2%;
+}
+#findStats{
+    font-size: 1.0em;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    text-align: center;
+    border: .5px solid #FA9C1D;
+    padding: 5%;
+    background: rgba(0,0,0,.2);
+    margin-left: 1%;
+    margin-right: 1%;
+}
+#homeTitle{
+    font-size: 1.75em;
+    text-align: center;
+    margin-bottom: 2%;
+}
+#findStats h2{
+    font-size: 1.25em;
+    margin-bottom: 2%;
+}
 
+#proForm button{
+    font-size: 1.0em;
+    background: #FA9C1D;
+}
+#proForm input{
+    font-size: 1.0em;
+    margin-bottom: 2%;
+    padding: 2%;
+    color: #4A4C4E;
+}
+#topStats{
+    margin-bottom: 5%;
+    
+    padding: 5%;
+    background: rgba(0,0,0,.2);
+    
+}
+#topStats p {
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+#statsDiv{
+    border: .5px solid #FA9C1D;
+    padding: 5%;
+    background: rgba(0,0,0,.65);
+    margin-top: 2%; 
+}
+#TTS,#TDD,#TSR,#THD{
+    margin-bottom: .5%;
+    border: .25px solid white;
+    padding: .5%;
+    text-align: center;
+}
 
-}
-header #user{
-    margin-left: 10rem;
-}
-section{
-    clear: both;
-   
-}
-section h3{
-    font: 2.8rem/1 "Bungee Regular",Arial,sans-serif;
-}
-#topStats p{
-    max-width: 750px;
-    position: relative;
-    margin-left: 25%;
+#statsDiv h3{
+    font-size: 1.50em;
+    border: .25px solid grey;
 }
 
-.statBoxes{
-
-    display: inline-block;
-    max-width: 50%;
-    background-color: rgba(0,0,0,.5);
-}
-header nav{
-    clear: both;
-}
