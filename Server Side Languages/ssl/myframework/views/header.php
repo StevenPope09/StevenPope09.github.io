@@ -12,6 +12,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
+    
     <main style="background-color: #EAF6FF;">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       
@@ -49,4 +50,28 @@
           
 
     <div class="container">
-            
+
+
+    <div class="modal" tabindex="-1" role="dialog" id="mymodal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">MESSAGE</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p><?echo @$_GET["msg"]?></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <?
+      if(@$_GET["msg"] || @$_GET["msg"] != ""){
+    ?>
+    <script type="text/javascript">setTimeout(function(){$("#mymodal").modal()},500);</script>
+      <?}?>     

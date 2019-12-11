@@ -13,8 +13,7 @@ class about extends AppController{
         
         $data = array();
         $data["pagename"] = "about";
-        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo");
-
+        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login");
         $this->parent->getView("header",$data);
         $this->parent->getView("aboutBody");
         $this->parent->getView("footer");
