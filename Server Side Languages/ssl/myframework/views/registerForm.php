@@ -2,10 +2,13 @@
 
     <div class="col-lg-12">
 
+    
+
         <form method="post" action="/register/registerAction" style="margin-top: 3em; margin-bottom: 3em;">
             <div>
                 <h2 style="text-align: center; margin-bottom: 3em;">New User Register Form</h2>
             </div>
+
             <div class="form-group">
                 <label for="exampleInputEmail1">First Name</label>
                 <input name="firstName" type="text" class="form-control form-control-lg" id="firstName" aria-describedby="firstName">
@@ -72,6 +75,68 @@
                 <input type="checkbox" class="form-check-input" id="check" name="checkBox">
                 <label class="form-check-label" for="check">Check to ensure you're human</label>
             </div>
+
+            <?
+
+                function create_image($cap)
+
+                {
+
+                //unlink("./assets/image1.png");
+
+                global $image;
+
+                $image = imagecreatetruecolor(200, 50) or die("Cannot Initialize new GD image stream");
+
+                $background_color = imagecolorallocate($image, 255, 255, 255);
+
+                $text_color = imagecolorallocate($image, 0, 255, 255);
+
+                $line_color = imagecolorallocate($image, 64, 64, 64);
+
+                $pixel_color = imagecolorallocate($image, 0, 0, 255);
+
+                imagefilledrectangle($image, 0, 0, 200, 50, $background_color);
+
+                for ($i = 0; $i < 3; $i++) {
+
+                imageline($image, 0, rand() % 50, 200, rand() % 50, $line_color);
+
+                }
+
+                for ($i = 0; $i < 1000; $i++) {
+
+                imagesetpixel($image, rand() % 200, rand() % 50, $pixel_color);
+
+                }
+
+                $text_color = imagecolorallocate($image, 0, 0, 0);
+
+                ImageString($image, 22, 30, 22, $cap, $text_color);
+
+                $_SESSION["captcha"] = $cap;
+                //var_dump($_SESSION["captcha"]);
+
+                imagepng($image, "./assets/image1.png");
+
+                }
+
+                create_image($data["cap"]);
+
+                echo "<img src='/assets/image1.png'>";
+
+
+
+            ?>
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">                
+                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                </div>
+
+                <input name="usercatpcha" type="text" class="form-control" placeholder="captcha">
+
+            </div> 
 
             <input type="submit" class="btn btn-danger btn-block" value="Submit">
 

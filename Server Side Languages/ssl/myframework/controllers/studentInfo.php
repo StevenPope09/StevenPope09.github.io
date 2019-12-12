@@ -11,8 +11,8 @@ class studentInfo extends AppController{
     public function index(){
         
         $data = array();
-        $data["pagename"] = "student info";
-        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login");
+        $data["pagename"] = "studentInfo";
+        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","studentInfo"=>"/studentInfo","register"=>"/register","login"=>"/login");
 
         $this->parent->getView("header",$data);
         $this->parent->getView("SIbody");

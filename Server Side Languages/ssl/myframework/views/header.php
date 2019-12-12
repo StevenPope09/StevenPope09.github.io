@@ -21,25 +21,26 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
+            <?foreach($data["navigation"]as $key=>$link){?>
+            <li class="nav-item">
+            <?if($key=="login"&& @$_SESSION["isLoggedin"]&& @$_SESSION["isLoggedin"]==1){?>
+            <a class=nav-link href="/crud" style="<?=$this->urlPathParts[0]=="crud"?"color:white":""?>">CRUD</a>
+            </li>
+            <li class="nav-item"><a class=nav-link href="/logout" >LOGOUT</a>
+            <?}else{?>
+            <a class="nav-link" href="<?=$link?>"
             <?
-                foreach($data["navigation"] as $key=>$link){
-                  if($data["pagename"] == $key){
-
-            ?>
-                <li class="nav-item active">
-                  <a class="nav-link" href="<?=$link?>"><?=strtoupper($key)?></a>
-                </li>
-            <?  
-                  }
-            
-            else {
-              ?>
-              <li>
-                <a class="nav-link" href="<?=$link?>"><?=strtoupper($key)?></a>
-              </li> 
-            <? 
+            if($this->urlPathParts[0]==$key){
+              echo "style='color:white'>";
+            }else{
+              echo " >";
             }
-          }
+            ?>
+            <?=strtoupper($key)?></a>
+            <?}?>
+            </li>
+            <?
+            }
             ?>
         </ul>
       </div>

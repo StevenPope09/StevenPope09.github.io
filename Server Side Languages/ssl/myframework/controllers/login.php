@@ -31,23 +31,31 @@ class login extends AppController{
     }
     
     public function recvForm(){
+        $_SESSION["cap"]= "";
         
         if($_POST["email"]== "test@test.com" && $_POST["password"]== "0000"){
-            header("location:/login?msg=Good Login");
+            
+            $_SESSION["isLoggedin"] = "1";
+            $_SESSION["userEmail"] = $_POST["email"];
+            header("location:/crud");
         }else{
+            $_SESSION["isLoggedin"] = "0";
+            $_SESSION["userEmail"] = "";
             header("location:/login?msg=Invalid User");
         }
         
+
+        
     }
 
-    public function recvAjax(){
+    // public function recvAjax(){
         
-        if($_POST["email"]== "test@test.com" && $_POST["password"]== "1234"){
-            echo "good";
-        }else{
-            echo "bad";
-        }
-    }
+    //     if($_POST["email"]== "test@test.com" && $_POST["password"]== "1234"){
+    //         echo "good";
+    //     }else{
+    //         echo "bad";
+    //     }
+    // }
     
     
 }

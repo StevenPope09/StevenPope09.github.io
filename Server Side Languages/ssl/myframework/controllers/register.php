@@ -9,17 +9,33 @@ class register extends AppController{
     }
 
     public function index(){
-        
-        
+
         $data = array();
+        
         $data["pagename"] = "register";
         $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login");
-
-
+        
+        $random = substr( md5(rand()), 0, 7);
+        $data["cap"]=$random;
+        
         $this->parent->getView("header",$data);
-        $this->parent->getView("registerForm");
+        $this->parent->getView("registerForm",$data);
         $this->parent->getView("footer");
-    }
+        
+        }
+
+    // public function index(){
+        
+        
+    //     $data = array();
+    //     $data["pagename"] = "register";
+    //     $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login");
+
+
+    //     $this->parent->getView("header",$data);
+    //     $this->parent->getView("registerForm");
+    //     $this->parent->getView("footer");
+    // }
 
     public function registerConfirmed(){
         $data = array();
@@ -36,6 +52,10 @@ class register extends AppController{
         //var_dump($_POST);
 
         $err = array();
+
+        if(!@$_POST["usercatpcha"] || $_POST["usercatpcha"]!=$_SESSION["captcha"]){
+            array_push($err,"Captcha Incorrect");
+            }
 
          if(empty($_POST["firstName"]) || $_POST["firstName"] == ""){
             array_push($err,"First name does not exist or is blank.");
