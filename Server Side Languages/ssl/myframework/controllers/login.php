@@ -15,7 +15,6 @@ class login extends AppController{
         $data["pagename"] = "login";
         $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login");
 
-
         $this->parent->getView("header",$data);
         $this->parent->getView("loginForms");
         $this->parent->getView("footer");
@@ -32,13 +31,30 @@ class login extends AppController{
     
     public function recvForm(){
         $_SESSION["cap"]= "";
+
+        $file = "./assets/users.txt";
+        $h = fopen($file,"r");
+        $content = fread($h,filesize($file));
+       
+        $users = explode(PHP_EOL, $content);
+        $user1 = explode("|", $users[0]);
+        $user2 = explode("|", $users[1]);
         
-        if($_POST["email"]== "test@test.com" && $_POST["password"]== "0000"){
+        if($_POST["email"]== $user1[0] && $_POST["password"]== $user1[1]){
             
             $_SESSION["isLoggedin"] = "1";
             $_SESSION["userEmail"] = $_POST["email"];
+            $_SESSION["user1"] = $user1;
             header("location:/crud");
-        }else{
+            fclose($h);
+        }
+        else if($_POST["email"]== $user2[0] && $_POST["password"]== $user2[1]){
+            $_SESSION["isLoggedin"] = "1";
+            $_SESSION["userEmail"] = $_POST["email"];
+            $_SESSION["user2"] = $user2;
+            header("location:/crud");
+        }
+        else{
             $_SESSION["isLoggedin"] = "0";
             $_SESSION["userEmail"] = "";
             header("location:/login?msg=Invalid User");

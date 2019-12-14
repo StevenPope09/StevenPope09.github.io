@@ -26,6 +26,9 @@
             <?if($key=="login"&& @$_SESSION["isLoggedin"]&& @$_SESSION["isLoggedin"]==1){?>
             <a class=nav-link href="/crud" style="<?=$this->urlPathParts[0]=="crud"?"color:white":""?>">CRUD</a>
             </li>
+            <li>
+              <a class=nav-link href="/profile" style="<?=$this->urlPathParts[0]=="profile"?"color:white":""?>">PROFILE</a>
+            </li>
             <li class="nav-item"><a class=nav-link href="/logout" >LOGOUT</a>
             <?}else{?>
             <a class="nav-link" href="<?=$link?>"
