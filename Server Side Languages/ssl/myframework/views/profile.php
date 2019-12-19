@@ -2,28 +2,6 @@
    <h2 style="text-align: center; margin-bottom: 3em;">User Profile Page</h2>
 </div>
 
-<div style="text-align: center; margin-bottom: 3em;">
-    <h3>User Information</h3>
-
-    <?if($_SESSION["userEmail"] == "Joe@aol.com"){?>
-        <div >
-            <?
-                foreach($_SESSION["user2"] as $p){
-                    echo "<p>".$p."</p>";
-                }
-            ?>
-        </div>
-    <?}else{?>
-        <div>
-            <?
-                foreach($_SESSION["user1"] as $p){
-                    echo "<p>".$p."</p>";
-                }
-            ?>
-        </div>
-            <?}?>
-</div>
-
 <div style="text-align: center;">
     <h4 >Profile Picture Form</h4>
     <img class="img-fluid "src="/assets/myimage.jpg">

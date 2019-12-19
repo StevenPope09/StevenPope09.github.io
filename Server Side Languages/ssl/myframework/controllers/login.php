@@ -32,37 +32,62 @@ class login extends AppController{
     public function recvForm(){
         $_SESSION["cap"]= "";
 
-        $file = "./assets/users.txt";
-        $h = fopen($file,"r");
-        $content = fread($h,filesize($file));
-       
-        $users = explode(PHP_EOL, $content);
-        $user1 = explode("|", $users[0]);
-        $user2 = explode("|", $users[1]);
         
-        if($_POST["email"]== $user1[0] && $_POST["password"]== $user1[1]){
+
+        // $file = "./assets/users.txt";
+        // $h = fopen($file,"r");
+        // $content = fread($h,filesize($file));
+       
+        // $users = explode(PHP_EOL, $content);
+        // $user1 = explode("|", $users[0]);
+        // $user2 = explode("|", $users[1]);
+
+
+        if($_POST["email"] && $_POST["password"]){
+
+                $data = $this->parent->getModel("users")->select("select * from users_table where email =
+                :email and password = :password", array(":email"=>$_POST["email"],":password"=>sha1($_POST["password"])));
+
+            if($data){
+                $_SESSION["isLoggedin"] = "1";
+                $_SESSION["userEmail"] = $_POST["email"];
+                header("location:/profile");
+            }else{
+                $_SESSION["isLoggedin"] = "0";
+                $_SESSION["userEmail"] = "";
+                header("location:/login?msg=Invalid User");
+            }
+
+        }
+    }
+
+        
+    //     if($_POST["email"] && $_POST["password"]){
             
-            $_SESSION["isLoggedin"] = "1";
-            $_SESSION["userEmail"] = $_POST["email"];
-            $_SESSION["user1"] = $user1;
-            header("location:/crud");
-            fclose($h);
-        }
-        else if($_POST["email"]== $user2[0] && $_POST["password"]== $user2[1]){
-            $_SESSION["isLoggedin"] = "1";
-            $_SESSION["userEmail"] = $_POST["email"];
-            $_SESSION["user2"] = $user2;
-            header("location:/crud");
-        }
-        else{
-            $_SESSION["isLoggedin"] = "0";
-            $_SESSION["userEmail"] = "";
-            header("location:/login?msg=Invalid User");
-        }
+    //         $data["users"] = $this->parent->getModel("users")->select("select * from users_table where email =
+    //         :email and password = :password", array(":email"=>$_POST["email"],":password"=>sha1($_POST["password"]));
+
+    //         $_SESSION["isLoggedin"] = "1";
+    //         $_SESSION["userEmail"] = $_POST["email"];
+    //         $_SESSION["user1"] = $user1;
+    //         header("location:/crud");
+            
+    //     }
+    //     else if($_POST["email"]== $user2[0] && $_POST["password"]== $user2[1]){
+    //         $_SESSION["isLoggedin"] = "1";
+    //         $_SESSION["userEmail"] = $_POST["email"];
+    //         $_SESSION["user2"] = $user2;
+    //         header("location:/crud");
+    //     }
+    //     else{
+    //         $_SESSION["isLoggedin"] = "0";
+    //         $_SESSION["userEmail"] = "";
+    //         header("location:/login?msg=Invalid User");
+    //     }
         
 
         
-    }
+    // }
 
     // public function recvAjax(){
         
