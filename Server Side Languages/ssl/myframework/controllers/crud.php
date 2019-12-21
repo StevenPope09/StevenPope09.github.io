@@ -18,7 +18,7 @@ class crud extends AppController{
             
         $data = array();
         $data["pagename"] = "crud";
-        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login");
+        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login","api"=>"/api");
 
         $sql = "select * from fruit_table";
         $data["fruit"] = $this->parent->getModel("fruit")->select($sql);
@@ -56,9 +56,9 @@ class crud extends AppController{
         $data = array();
         $data["pagename"] = "crud";
         $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login");
-        $userId = $this->parent->urlPathParts[2];
+        $fruitId = $this->parent->urlPathParts[2];
         
-        $sql = "select * from fruit_table where id=".$userId ;
+        $sql = "select * from fruit_table where id=".$fruitId ;
         $data["fruit"] = $this->parent->getModel("fruit")->select($sql);
 
         $this->parent->getView("header",$data);
@@ -76,9 +76,9 @@ class crud extends AppController{
     }
 
     public function delete(){
-        $userId = $this->parent->urlPathParts[2];
+        $fruitId = $this->parent->urlPathParts[2];
         var_dump($userId);
-        $sql = "delete from  fruit_table where id =".$userId;
+        $sql = "delete from  fruit_table where id =".$fruitId;
         $data["fruit"] = $this->parent->getModel("fruit")->delete($sql);
         header("location:/crud");
     }

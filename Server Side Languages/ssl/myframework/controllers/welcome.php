@@ -12,7 +12,7 @@ class welcome extends AppController{
         
         $data = array();
         $data["pagename"] = "welcome";
-        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login");
+        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login","api"=>"/api");
 
         $this->parent->getView("header",$data);
         $this->parent->getView("welcomeBody");

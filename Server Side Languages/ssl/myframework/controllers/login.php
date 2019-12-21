@@ -13,7 +13,7 @@ class login extends AppController{
         
         $data = array();
         $data["pagename"] = "login";
-        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login");
+        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login","api"=>"/api");
 
         $this->parent->getView("header",$data);
         $this->parent->getView("loginForms");

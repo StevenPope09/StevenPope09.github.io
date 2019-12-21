@@ -1,6 +1,5 @@
-<?php
-
-class about extends AppController{
+<?
+class api extends AppController{
 
     public function __construct($parent){
         $this->parent=$parent;
@@ -9,15 +8,20 @@ class about extends AppController{
     }
 
     public function index(){
-        
-        
+
         $data = array();
-        $data["pagename"] = "about";
+        $data["pagename"] = "api";
         $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login","api"=>"/api");
-        $this->parent->getView("header",$data);
-        $this->parent->getView("aboutBody");
-        $this->parent->getView("footer");
+        $data["api"] = $this->parent->getModel("apiModel")->catApi();
+
+        
+        $this->getView("api",$data);
+        $this->getView("footer");
     }
-    
+
+
+
+
 }
+
 ?>

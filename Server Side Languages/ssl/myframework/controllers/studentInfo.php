@@ -12,7 +12,7 @@ class studentInfo extends AppController{
         
         $data = array();
         $data["pagename"] = "studentInfo";
-        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","studentInfo"=>"/studentInfo","register"=>"/register","login"=>"/login");
+        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login","api"=>"/api");
 
         $this->parent->getView("header",$data);
         $this->parent->getView("SIbody");

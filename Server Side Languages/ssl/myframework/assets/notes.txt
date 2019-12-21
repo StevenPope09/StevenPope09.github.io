@@ -21,3 +21,58 @@
 </div> 
 
 for profile page if we use text file login
+
+
+// curl use 
+//$curl = curl_init($url);
+      
+      	// Request body data (usually for POST, PUT, or DELETE)
+        /*
+        $requestBody = [
+          'collection' => 'RapidAPI'
+        ];
+        */
+        /*
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_GET, true);
+        // Set the request body data (not necessary in this example)
+        // curl_setopt($curl, CURLOPT_POSTFIELDS,  json_encode($requestBody));
+        curl_setopt($curl, CURLOPT_HTTPHEADER, [
+          'x-api-key: f474c959-1c0b-4090-805d-13b77663b36d'
+        ]);
+        
+        // Sending the request
+		$response = curl_exec($curl);
+      	$results = json_decode($response);
+      	var_dump($results);
+        curl_close($curl);
+        */
+
+
+        //---------------------------\\
+             API Data Notes
+             
+
+// API (Application Programming Interface): code written by the developer of an app that allows your app to communicate with theirs
+// HTTP Request: a message that one computer sends to another to run an application
+
+// You can write an application to send HTTP requests to an API to use it.
+
+// To use an API, look at the documentation and find the following...
+
+// 1. Endpoint(s)
+// 2. Any expected request data (either in the query string, request body, or in the URL)
+// 3. Any expected headers (Content-Type, CORS (Access-Control-Allow-Origin: *), etc...)
+// 4. How the API key is expected (header or request data)
+// 5. How the API responds (what data and what format)
+
+// NOTE: Sometimes you'll need an "API Key", which is an authentication string unique to you
+
+// Example (Cat API):
+// 1. https://api.thecatapi.com/v1/breeds
+// 2. 
+// - Content-Type: 
+// - Access-Control-Allow-Origin: *
+// 3. x-api-key: f474c959-1c0b-4090-805d-13b77663b36d
+// 4. Header
+// 5. An array of "breed" objects in JSON format

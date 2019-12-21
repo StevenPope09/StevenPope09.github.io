@@ -18,7 +18,7 @@ class profile extends AppController{
         
         $data = array();
         $data["pagename"] = "profile";
-        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login");
+        $data["navigation"] = array("welcome"=>"/welcome","about"=>"/about","student info"=>"/studentInfo","register"=>"/register","login"=>"/login","api"=>"/api");
         
         //var_dump(file_get_contents("./assets/note.xml"));
 
