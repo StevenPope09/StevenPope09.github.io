@@ -20,6 +20,21 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+a {
+  color: white;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+a:hover {
+  color: gold;
+  text-decoration: underline;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
 main {
   /* background-color: rgba(0, 0, 255, .5); */
   color: gold;
@@ -64,7 +79,7 @@ h3 {
   letter-spacing: 2px;
   line-height: 1.5;
   font-size: 200%;
-  text-decoration: underline;
+
 }
 
 .header {
