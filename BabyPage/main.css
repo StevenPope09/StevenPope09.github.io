@@ -1,0 +1,81 @@
+@font-face {
+  font-family: star-jedi;
+  src: url(./star-jedi-font/StarJediRounded-jW3R.ttf);
+}
+
+@font-face {
+  font-family: soloist;
+  src: url(./soloist-font/Soloist-Z6M8.otf);
+}
+
+@font-face {
+  font-family: mandalore;
+  src: url(./mandalore-font/Mandalore-K77lD.otf)
+}
+
+body {
+  background: url(./images/space.png);
+  background-position: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+main {
+  /* background-color: rgba(0, 0, 255, .5); */
+  color: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#text {
+  /* background: rgba(255, 255, 255, .1); */
+}
+
+.registry {
+  text-align: center;
+  /* border: 2px solid black; */
+  padding: 10%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main {
+  height: 100vh;
+}
+
+p {
+  font-family: mandalore;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  font-size: 150%;
+}
+
+h1 {
+  font-family: soloist;
+  font-size: 205%;
+}
+
+h3 {
+  font-family: mandalore;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  font-size: 200%;
+  text-decoration: underline;
+}
+
+.header {
+  margin-top: 2%;
+  padding: 10%;
+  text-align: center;
+}
+
+#container {
+  /* background: url(./images/space.png); */
+  background: rgba(0, 0, 0, .5);
+  background-position: center;
+  font-weight: bold;
+}
